@@ -8,5 +8,15 @@ export const environment: Partial<BuildConfig> = {
     preboot: true,
     async: true,
     time: false
-  }
+  },
+  defaultLanguage: 'en',
+  languages: [{
+    code: 'en',
+    label: 'English',
+    active: true,
+  }, {
+    code: 'ar',
+    label: 'Arabic',
+    active: true,
+  }]
 };

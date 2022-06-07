@@ -1,5 +1,53 @@
 rest:
-  ssl: true
-  host: api7.dspace.org
-  port: 443
+  ssl: false
+  host: localhost
+  port: 8080
   nameSpace: /server
+
+defaultLanguage: en
+languages:
+  - code: en
+    label: English
+    active: true
+  - code: ar
+    label: Arabic
+    active: true
+  - code: cs
+    label: Čeština
+    active: false
+  - code: de
+    label: Deutsch
+    active: false
+  - code: es
+    label: Español
+    active: false
+  - code: fr
+    label: Français
+    active: false
+  - code: gd
+    label: Gàidhlig
+    active: false
+  - code: lv
+    label: Latviešu
+    active: false
+  - code: hu
+    label: Magyar
+    active: false
+  - code: nl
+    label: Nederlands
+    active: false
+  - code: pt-PT
+    label: Português
+    active: false
+  - code: pt-BR
+    label: Português do Brasil
+    active: false
+  - code: fi
+    label: Suomi
+    active: false
+  - code: tr
+    label: Türkçe
+    active: false
+  - code: bn
+    label: বাংলা
+    active: false

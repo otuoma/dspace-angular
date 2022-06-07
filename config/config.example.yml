@@ -115,45 +115,48 @@ languages:
   - code: en
     label: English
     active: true
+  - code: ar
+    label: Arabic
+    active: true
   - code: cs
     label: Čeština
-    active: true
+    active: false
   - code: de
     label: Deutsch
-    active: true
+    active: false
   - code: es
     label: Español
-    active: true
+    active: false
   - code: fr
     label: Français
-    active: true
+    active: false
   - code: gd
     label: Gàidhlig
-    active: true
+    active: false
   - code: lv
     label: Latviešu
-    active: true
+    active: false
   - code: hu
     label: Magyar
-    active: true
+    active: false
   - code: nl
     label: Nederlands
-    active: true
+    active: false
   - code: pt-PT
     label: Português
-    active: true
+    active: false
   - code: pt-BR
     label: Português do Brasil
-    active: true
+    active: false
   - code: fi
     label: Suomi
-    active: true
+    active: false
   - code: tr
     label: Türkçe
-    active: true
+    active: false
   - code: bn
     label: বাংলা
-    active: true
+    active: false
 
 # Browse-By Pages
 browseBy:

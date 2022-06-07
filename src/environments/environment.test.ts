@@ -150,7 +150,6 @@ export const environment: BuildConfig = {
 
   // Default Language in which the UI will be rendered if the user's browser language is not an active language
   defaultLanguage: 'en',
-
   // Languages. DSpace Angular holds a message catalog for each of the following languages.
   // When set to active, users will be able to switch to the use of this language in the user interface.
   languages: [{
@@ -158,33 +157,37 @@ export const environment: BuildConfig = {
     label: 'English',
     active: true,
   }, {
-    code: 'de',
-    label: 'Deutsch',
+    code: 'ar',
+    label: 'Arabic',
     active: true,
+  }, {
+      code: 'de',
+      label: 'Deutsch',
+      active: false,
   }, {
     code: 'cs',
     label: 'Čeština',
-    active: true,
+    active: false,
   }, {
     code: 'nl',
     label: 'Nederlands',
-    active: true,
+    active: false,
   }, {
     code: 'pt',
     label: 'Português',
-    active: true,
+    active: false,
   }, {
     code: 'fr',
     label: 'Français',
-    active: true,
+    active: false,
   }, {
     code: 'lv',
     label: 'Latviešu',
-    active: true,
+    active: false,
   }, {
     code: 'bn',
     label: 'বাংলা',
-    active: true,
+    active: false,
   }],
 
   // Browse-By Pages
