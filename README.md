@@ -6,7 +6,7 @@ git clone https://github.com/otuoma/dspace-angular.git -b MoFP
 ``
 
 ``
-cd MoFP
+cd dspace-angular
 ``
 
 Connect to your backend by editing the file in ``MoFP/config/config.prod.yml``
@@ -22,6 +22,81 @@ Run the application
 
 ``
 yarn start:prod
+``
+
+
+### Deploy the application
+Install pm2 
+
+``
+sudo npm install --global pm2
+``
+
+Create the deployment directory
+
+``
+mkdir dspace-angular-deployment
+``
+
+then copy `dist` and `config` directories to the deployment directory
+
+``
+cp -r dist dspace-angular-deployment/
+``
+
+``
+cp -r config dspace-angular-deployment/
+``
+
+then
+
+``
+cd dspace-angular-deployment
+``
+
+Create pm2 deployment file 
+
+``
+touch dspace-ui.json
+``
+
+Add the following contents to the file
+
+````
+{
+    "apps": [
+        {
+           "name": "dspace-ui",
+           "cwd": "/full/path/to/dspace-angular-deployment",
+           "script": "dist/server/main.js",
+           "instances": "max",
+           "exec_mode": "cluster",
+           "env": {
+              "NODE_ENV": "production"
+           }
+        }
+    ]
+}
+````
+
+NOTE: The "cwd" setting MUST correspond to your [dspace-angular-deploy] folder path
+
+Run the application with pm2
+
+``
+pm2 start dspace-ui.json
+``
+
+To stop the application
+
+``
+pm2 stop dspace-ui.json
+``
+
+OR
+
+``
+pm2 stop all
 ``
 
 [![Build Status](https://github.com/DSpace/dspace-angular/workflows/Build/badge.svg?branch=main)](https://github.com/DSpace/dspace-angular/actions?query=workflow%3ABuild) [![Coverage Status](https://codecov.io/gh/DSpace/dspace-angular/branch/main/graph/badge.svg)](https://codecov.io/gh/DSpace/dspace-angular) [![Universal Angular](https://img.shields.io/badge/universal-angular2-brightgreen.svg?style=flat)](https://github.com/angular/universal)
