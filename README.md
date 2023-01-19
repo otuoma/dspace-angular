@@ -32,6 +32,12 @@ Install pm2
 sudo npm install --global pm2
 ``
 
+Build the application for production
+
+``
+yarn build:prod
+``
+
 Create the deployment directory
 
 ``
