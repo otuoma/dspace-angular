@@ -1,0 +1,15 @@
+{
+  "menu.section.browse_global": "Browse",
+
+  "repository.title.prefix": "MKU E-repository :: ",
+
+  "repository.title.prefixDSpace": "MKU E-Repository ::",
+
+  "menu.section.browse_global_by_srsc": "By Source",
+
+  "menu.section.browse_global_communities_and_collections": "Collections",
+
+  "browse.metadata.srsc": "Source",
+
+  "browse.metadata.srsc.breadcrumbs": "Browse by Source"
+}
