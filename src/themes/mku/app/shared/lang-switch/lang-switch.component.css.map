@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,uBAAwB;EACtB,OAAO,EAAC,IAAI;;AAGd,gBAAiB;EACf,KAAK,EAAE,2BAA2B;EAElC,8CAAiB;IACf,KAAK,EAAE,iCAAiC;;AAI5C,SAAU;EACR,KAAK,EAAE,eAAe",
+"sources": ["lang-switch.component.scss"],
+"names": [],
+"file": "lang-switch.component.css"
+}

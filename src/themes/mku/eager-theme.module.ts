@@ -46,7 +46,7 @@ import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-b
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
-
+import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -72,6 +72,7 @@ const DECLARATIONS = [
   HeaderNavbarWrapperComponent,
   NavbarComponent,
   SearchNavbarComponent,
+  LangSwitchComponent,
   FooterComponent,
   CreateCollectionParentSelectorComponent,
   CreateCommunityParentSelectorComponent,
@@ -79,6 +80,7 @@ const DECLARATIONS = [
   EditCollectionSelectorComponent,
   EditCommunitySelectorComponent,
   EditItemSelectorComponent,
+
 ];
 
 @NgModule({

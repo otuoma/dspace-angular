@@ -6,6 +6,11 @@
   //--ds-header-icon-color: #{$link-color};
   //--ds-header-icon-color-hover: #{darken($link-color, 15%)};
   --ds-navbar-link-color: #dd9933;
+  --mku-blue: #013378;
+}
+.btn-primary {
+  background-color: var(--mku-blue);
+  border-color: var(--mku-blue);
 }
 div.background-image {
   color: #fff;
@@ -22,7 +27,7 @@ div.background-image.background-image-6{
 div.background-image .overlay {
   background: #000;
   background: -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(50%,transparent),color-stop(70%,rgba(0,0,0,.6110819328)),to(rgba(0,0,0,.75)));
-  background: linear-gradient(180deg,transparent,transparent 50%,rgba(0,0,0,.6110819328) 70%,rgba(0,0,0,.75));
+  background: linear-gradient(180deg,transparent,transparent 10%,rgba(0,0,0,.6110819328) 70%,rgba(0,0,0,.75));
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -30,7 +35,12 @@ div.background-image .overlay {
 div.background-image .container {
   text-shadow: 1px 1px 4px rgba(0,0,0,.6);
 }
-
+.navbar a {
+  color: var(--mku-blue);
+}
+.navbar-brand img{
+  max-width: 300px;
+}
 
 @media screen and (min-width: 768px) {
   /* Styles for tablets and larger screens */
