@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAM;EACJ,OAAO,EAAE,IAAI",
+"sources": ["view-tracker.component.scss"],
+"names": [],
+"file": "view-tracker.component.css"
+}

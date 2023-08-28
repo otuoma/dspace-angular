@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAa;EACX,OAAO,EAAE,eAAe",
+"sources": ["alert.component.scss"],
+"names": [],
+"file": "alert.component.css"
+}

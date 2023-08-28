@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,GAAI;EACF,UAAU,EAAE,UAAU;EACtB,SAAS,EAAE,UAAU;EACrB,aAAa,EAAE,UAAU",
+"sources": ["comcol-page-handle.component.scss"],
+"names": [],
+"file": "comcol-page-handle.component.css"
+}

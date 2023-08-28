@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EACV,eAAe,EAAE,aAAa;;AAGlC,oFAAoF;AAElF,8BAAyB;EACvB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,EAAE;AAGZ,qBAAe;EACb,cAAc,EAAE,MAAM",
+"sources": ["dynamic-lookup-relation-modal.component.scss"],
+"names": [],
+"file": "dynamic-lookup-relation-modal.component.css"
+}

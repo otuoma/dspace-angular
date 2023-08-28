@@ -61,15 +61,9 @@
                 "bundleName": "dspace-theme"
               },
               {
-<<<<<<< HEAD
                 "input": "src/themes/mku/styles/theme.scss",
                 "inject": false,
                 "bundleName": "mku-theme"
-=======
-                "input": "src/themes/mofp/styles/theme.scss",
-                "inject": false,
-                "bundleName": "mofp-theme"
->>>>>>> 8f83caa5cda26d8be5b84c90519e5584be318212
               }
             ],
             "scripts": [],
@@ -277,16 +271,26 @@
           "options": {
             "lintFilePatterns": [
               "src/**/*.ts",
-              "src/**/*.html"
+              "src/**/*.html",
+              "src/**/*.json5"
             ]
           }
         }
       }
     }
   },
-  "defaultProject": "dspace-angular",
   "cli": {
     "analytics": false,
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
+  },
+  "schematics": {
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
+    }
   }
 }

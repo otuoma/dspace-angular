@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,kBAAa;EACT,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM",
+"sources": ["../../object-grid/search-result-grid-element/search-result-grid-element.component.scss"],
+"names": [],
+"file": "search-result-detail-element.component.css"
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EACV,KAAK,EAAE,IAAI;EAEX,4BAAe;IACX,WAAW,EAAE,MAAM;IACnB,UAAU,EAAE,UAAU;IACtB,OAAO,EAAE,mDAAmD;IAC5D,kCAAQ;MACJ,OAAO,EAAE,IAAI;;AAKzB,IAAK;EACD,QAAQ,EAAE,QAAQ",
+"sources": ["input-suggestions.component.scss"],
+"names": [],
+"file": "input-suggestions.component.css"
+}

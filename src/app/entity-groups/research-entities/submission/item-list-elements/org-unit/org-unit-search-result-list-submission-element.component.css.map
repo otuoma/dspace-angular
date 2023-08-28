@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAkB;EACd,KAAK,EAAE,iDAAiD",
+"sources": ["org-unit-search-result-list-submission-element.component.scss"],
+"names": [],
+"file": "org-unit-search-result-list-submission-element.component.css"
+}

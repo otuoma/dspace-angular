@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,iCAAkC;EAChC,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,OAAO;EACZ,aAAa,EAAE,OAAO",
+"sources": ["section-upload-file-edit.component.scss"],
+"names": [],
+"file": "section-upload-file-edit.component.css"
+}

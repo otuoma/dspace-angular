@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,cAAe;EACb,gBAAgB,EAAE,kBAAkB;EACpC,KAAK,EAAE,qBAAqB",
+"sources": ["starts-with-text.component.scss"],
+"names": [],
+"file": "starts-with-text.component.css"
+}

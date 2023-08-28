@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAQ;EACN,OAAO,EAAE,IAAI;;AAGf,OAAQ;EACN,IAAI,EAAE,IAAI;;AAGZ,IAAK;EACH,IAAI,EAAE,OAAO",
+"sources": ["my-dspace-new-submission.component.scss"],
+"names": [],
+"file": "my-dspace-new-submission.component.css"
+}

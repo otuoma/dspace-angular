@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,iCAAkB;EACd,YAAY,EAAE,0BAA0B;EACxC,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,CAAC;AAGlB,wCAAyB;EACrB,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,2BAA2B;EAClC,QAAQ,EAAE,MAAM;EAChB,aAAa,EAAE,2BAA2B;AAG9C,oCAAqB;EACjB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;AAG1B,2CAA4B;EAC1B,gBAAgB,EAAE,4CAA4C",
+"sources": ["expandable-admin-sidebar-section.component.scss"],
+"names": [],
+"file": "expandable-admin-sidebar-section.component.css"
+}

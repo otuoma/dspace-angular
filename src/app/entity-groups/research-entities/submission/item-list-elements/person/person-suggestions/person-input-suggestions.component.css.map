@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,WAAS;EACL,cAAc,EAAE,IAAI;EACpB,QAAQ,EAAE,QAAQ;EAClB,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,qBAAqB;EAClC,OAAO,EAAE,OAAO;EAChB,GAAG,EAAE,GAAG;EACR,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;AAGf,2BAAuB;EACnB,UAAU,EAAE,WAAW",
+"sources": ["person-input-suggestions.component.scss"],
+"names": [],
+"file": "person-input-suggestions.component.css"
+}

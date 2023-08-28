@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAM;EACJ,OAAO,EAAC,KAAK",
+"sources": ["object-collection.component.scss"],
+"names": [],
+"file": "object-collection.component.css"
+}

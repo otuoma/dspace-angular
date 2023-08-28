@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EACf,MAAM,EAAE,OAAO",
+"sources": ["health-panel.component.scss"],
+"names": [],
+"file": "health-panel.component.css"
+}

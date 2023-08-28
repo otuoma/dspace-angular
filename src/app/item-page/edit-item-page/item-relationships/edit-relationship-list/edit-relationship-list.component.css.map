@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,6BAA8B;EAC5B,OAAO,EAAE,2BAA2B;;AAGtC,uBAAwB;EACtB,WAAW,EAAE,oCAAoC;EACjD,YAAY,EAAE,oCAAoC;EAClD,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI",
+"sources": ["edit-relationship-list.component.scss"],
+"names": [],
+"file": "edit-relationship-list.component.css"
+}

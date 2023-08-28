@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAO;EACL,GAAG,EAAE,OAAO",
+"sources": ["dynamic-relation-group.component.scss"],
+"names": [],
+"file": "dynamic-relation-group.component.css"
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAkB;EAChB,KAAK,EAAE,iDAAiD",
+"sources": ["person-search-result-list-submission-element.component.scss"],
+"names": [],
+"file": "person-search-result-list-submission-element.component.css"
+}

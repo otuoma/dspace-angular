@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAE;EACE,KAAK,EAAE,oBAAoB;EAC3B,OAAQ;IACJ,eAAe,EAAE,SAAS;IAC1B,KAAK,EAAE,0BAA0B;EAGrC,YAAW;IACP,cAAc,EAAE,QAAQ",
+"sources": ["search-facet-range-option.component.scss"],
+"names": [],
+"file": "search-facet-range-option.component.css"
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAgB;EACd,MAAM,EAAE,iBAAiB;EACzB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;;AAEb,aAAc;EACZ,UAAU,EAAE,KAAK;EACjB,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,KAAK;;AAElB,cAAe;EACb,aAAa,EAAE,CAAC",
+"sources": ["mirador-viewer.component.scss"],
+"names": [],
+"file": "mirador-viewer.component.css"
+}

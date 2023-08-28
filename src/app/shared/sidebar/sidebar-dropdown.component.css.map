@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAgB;EACd,MAAM,EAAE,yBAAyB",
+"sources": ["sidebar-dropdown.component.scss"],
+"names": [],
+"file": "sidebar-dropdown.component.css"
+}

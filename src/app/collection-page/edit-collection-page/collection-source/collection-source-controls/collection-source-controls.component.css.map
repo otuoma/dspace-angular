@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAgB;EACZ,aAAa,EAAE,wEAAwE",
+"sources": ["collection-source-controls.component.scss"],
+"names": [],
+"file": "collection-source-controls.component.css"
+}

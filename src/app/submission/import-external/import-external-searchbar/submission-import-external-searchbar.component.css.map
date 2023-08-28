@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,4EAA6E;EAC3E,WAAW,EAAE,IAAI;EACjB,aAAa,EAAE,mBAAmB;;AAGpC,oCAAqC;EACnC,aAAa,EAAE,CAAC;;AAGlB,KAAM;EACJ,SAAS,EAAE,KAAK;;AAGlB,gBAAiB;EACf,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,4CAA4C;EACxD,UAAU,EAAE,MAAM;;AAGpB,4BAA6B;EAC3B,gBAAgB,EAAE,iBAAiB;EACnC,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,qCAAqC;EAC7C,WAAW,EAAE,0BAA0B;EACvC,QAAQ,EAAE,MAAM;EAChB,MAAM,EAAE,CAAC",
+"sources": ["submission-import-external-searchbar.component.scss"],
+"names": [],
+"file": "submission-import-external-searchbar.component.css"
+}

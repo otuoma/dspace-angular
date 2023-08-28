@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAa;EACX,OAAO,EAAE,eAAe",
+"sources": ["submission-import-external-preview.component.scss"],
+"names": [],
+"file": "submission-import-external-preview.component.css"
+}

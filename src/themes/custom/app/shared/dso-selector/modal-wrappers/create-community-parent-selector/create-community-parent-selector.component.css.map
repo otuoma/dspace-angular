@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,8BAA+B;EAC3B,GAAG,EAAE,CAAC",
+"sources": ["create-community-parent-selector.component.scss"],
+"names": [],
+"file": "create-community-parent-selector.component.css"
+}

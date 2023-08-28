@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAO;EACL,OAAO,EAAE,MAAM;;AAGjB,EAAG;EACD,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI",
+"sources": ["statistics-table.component.scss"],
+"names": [],
+"file": "statistics-table.component.css"
+}

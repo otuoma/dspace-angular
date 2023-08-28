@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,cAAS;EACL,WAAW,EAAE,uBAAuB;AAExC,yBAAoB;EAChB,aAAa,EAAE,gBAAgB;AAEnC,+EAA0E;EACtE,aAAa,EAAE,0BAA0B;EACzC,OAAO,EAAE,KAAK;AAElB,oCAA+B;EAC7B,aAAa,EAAE,0BAA0B;EACzC,OAAO,EAAE,KAAK",
+"sources": ["search-sidebar.component.scss"],
+"names": [],
+"file": "search-sidebar.component.css"
+}

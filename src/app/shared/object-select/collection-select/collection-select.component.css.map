@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,oDAAsD;EACpD,KAAK,EAAE,eAAe",
+"sources": ["collection-select.component.scss"],
+"names": [],
+"file": "collection-select.component.css"
+}

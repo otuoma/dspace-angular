@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAQ;EACJ,KAAK,EAAC,GAAG",
+"sources": ["feedback-form.component.scss"],
+"names": [],
+"file": "feedback-form.component.css"
+}

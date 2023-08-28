@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,2BAA4B;EAC1B,4BAA4B;EAC5B,aAAa,EAAE,UAAU;EAAE,QAAQ;EACnC,cAAc,EAAE,UAAU;EAAE,QAAQ;EACpC,iBAAiB,EAAE,UAAU;EAAE,uBAAuB;EACtD,YAAY,EAAE,UAAU;EAAE,WAAW;EACrC,OAAO,EAAE,IAAI",
+"sources": ["end-user-agreement.component.scss"],
+"names": [],
+"file": "end-user-agreement.component.css"
+}

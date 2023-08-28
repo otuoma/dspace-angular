@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,8CAA+C;EAC7C,OAAO,EAAE,IAAI;;AAGf,UAAW;EACT,UAAU,EAAE,eAAe;;AAG7B,2BAA4B;EAC1B,OAAO,EAAE,IAAI",
+"sources": ["truncatable-part.component.scss"],
+"names": [],
+"file": "truncatable-part.component.css"
+}

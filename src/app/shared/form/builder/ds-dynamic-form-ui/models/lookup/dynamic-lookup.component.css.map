@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,uBAAwB;EACtB,OAAO,EAAC,IAAI;;AAGd,8BAA+B;EAC7B,IAAI,EAAE,YAAY;EAClB,KAAK,EAAE,eAAe;EACtB,UAAU,EAAE,kCAAkC;EAC9C,UAAU,EAAE,eAAe;EAC3B,UAAU,EAAE,MAAM;;AAGpB;;;oCAGqC;EACnC,KAAK,EAAE,8CAA8C;EACrD,gBAAgB,EAAE,2CAA2C;;AAG/D,GAAI;EACF,QAAQ,EAAE,OAAO;;AAGnB,YAAa;EACX,aAAa,EAAE,qEAAqE",
+"sources": ["dynamic-lookup.component.scss"],
+"names": [],
+"file": "dynamic-lookup.component.css"
+}

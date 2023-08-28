@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAgB;EACZ,MAAM,EAAE,yBAAyB",
+"sources": ["search-settings.component.scss"],
+"names": [],
+"file": "search-settings.component.css"
+}

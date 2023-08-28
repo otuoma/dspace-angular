@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAE;EACE,MAAM,EAAE,OAAO",
+"sources": ["onclick-menu-item.component.scss"],
+"names": [],
+"file": "onclick-menu-item.component.css"
+}

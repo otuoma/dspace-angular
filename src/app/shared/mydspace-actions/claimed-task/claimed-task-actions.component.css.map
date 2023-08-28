@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,oCAAqC;EACnC,MAAM,EAAE,YAAY",
+"sources": ["claimed-task-actions.component.scss"],
+"names": [],
+"file": "claimed-task-actions.component.css"
+}

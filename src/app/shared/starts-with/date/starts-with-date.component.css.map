@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,cAAe;EACb,gBAAgB,EAAE,kBAAkB;EACpC,KAAK,EAAE,qBAAqB",
+"sources": ["starts-with-date.component.scss"],
+"names": [],
+"file": "starts-with-date.component.css"
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iCAAkC;EAChC,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,OAAO;EACZ,aAAa,EAAE,OAAO",
+"sources": ["section-accesses.component.scss"],
+"names": [],
+"file": "section-accesses.component.css"
+}

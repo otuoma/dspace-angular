@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,0BAAqB;EACnB,aAAa,EAAE,IAAI",
+"sources": ["metadata-field-wrapper.component.scss"],
+"names": [],
+"file": "metadata-field-wrapper.component.css"
+}

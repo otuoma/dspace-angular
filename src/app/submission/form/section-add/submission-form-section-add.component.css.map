@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,uBAAwB;EACtB,OAAO,EAAC,IAAI;;AAGd,uBAAwB;EACtB,OAAO,EAAE,mCAAmC",
+"sources": ["submission-form-section-add.component.scss"],
+"names": [],
+"file": "submission-form-section-add.component.css"
+}

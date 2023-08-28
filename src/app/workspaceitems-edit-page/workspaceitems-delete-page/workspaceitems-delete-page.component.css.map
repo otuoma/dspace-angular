@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,6CAA8C;EAC5C,OAAO,EAAE,uBAAuB",
+"sources": ["workspaceitems-delete-page.component.scss"],
+"names": [],
+"file": "workspaceitems-delete-page.component.css"
+}

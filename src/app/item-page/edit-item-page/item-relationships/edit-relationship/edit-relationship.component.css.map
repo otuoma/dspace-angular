@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAe;EACb,KAAK,EAAE,kBAAkB;EACzB,YAAY,EAAE,kBAAkB;EAChC,OAAO,EAAE,CAAC;;AAGZ,4BAA6B;EAC3B,MAAM,EAAE,CAAC;EACT,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,SAAS,EAAE,qBAAqB",
+"sources": ["edit-relationship.component.scss"],
+"names": [],
+"file": "edit-relationship.component.css"
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAM;EACF,WAAW,EAAE,CAAC",
+"sources": ["search-labels.component.scss"],
+"names": [],
+"file": "search-labels.component.css"
+}

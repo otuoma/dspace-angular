@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAkB;EACd,OAAO,EAAE,yBAAyB",
+"sources": ["existing-relation-list-element.component.scss"],
+"names": [],
+"file": "existing-relation-list-element.component.css"
+}

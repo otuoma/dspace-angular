@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAgB;EACZ,MAAM,EAAE,yBAAyB",
+"sources": ["page-size-selector.component.scss"],
+"names": [],
+"file": "page-size-selector.component.css"
+}

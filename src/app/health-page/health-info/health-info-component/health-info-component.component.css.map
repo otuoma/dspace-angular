@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EACf,MAAM,EAAE,OAAO",
+"sources": ["health-info-component.component.scss"],
+"names": [],
+"file": "health-info-component.component.css"
+}

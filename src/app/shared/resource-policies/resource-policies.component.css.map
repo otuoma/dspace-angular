@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAmB;EACjB,UAAU,EAAE,eAAe",
+"sources": ["resource-policies.component.scss"],
+"names": [],
+"file": "resource-policies.component.css"
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,yBACA;EACE,kBAAkB,EAAE,gCAA6B;EACjD,gBAAgB,EAAE,OAAO;;AAG3B,mBACA;EACE,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,OAAO;;AAG3B,yBACA;EACE,kBAAkB,EAAE,gCAA4B;EAChD,gBAAgB,EAAE,IAAI",
+"sources": ["workspace-item-search-result-list-element.component.scss"],
+"names": [],
+"file": "workspace-item-search-result-list-element.component.css"
+}
