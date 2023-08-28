@@ -61,9 +61,15 @@
                 "bundleName": "dspace-theme"
               },
               {
+<<<<<<< HEAD
                 "input": "src/themes/mku/styles/theme.scss",
                 "inject": false,
                 "bundleName": "mku-theme"
+=======
+                "input": "src/themes/mofp/styles/theme.scss",
+                "inject": false,
+                "bundleName": "mofp-theme"
+>>>>>>> 8f83caa5cda26d8be5b84c90519e5584be318212
               }
             ],
             "scripts": [],

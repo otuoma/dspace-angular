@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 // import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme.module';
 import { EagerThemeModule as MKUEagerThemeModule } from './mku/eager-theme.module';
 
@@ -11,8 +12,7 @@ import { EagerThemeModule as MKUEagerThemeModule } from './mku/eager-theme.modul
  */
 @NgModule({
   imports: [
-    MKUEagerThemeModule,
-  ],
+    MKUEagerThemeModule],
 })
 export class EagerThemesModule {
 }
