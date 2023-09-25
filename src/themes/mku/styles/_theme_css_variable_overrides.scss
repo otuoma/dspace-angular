@@ -11,9 +11,13 @@
   --mku-orange: #dd9933;
   --ds-header-icon-color: var(--mku-blue);
 }
-.btn-primary.disabled, .btn-primary:disabled, .btn-primary, .badge-info {
+.btn-primary.disabled, .btn-primary:disabled, .btn-primary {
   background-color: var(--mku-blue);
   border-color: var(--mku-blue);
+}
+.badge-info, .badge-secondary {
+  background-color: var(--mku-orange);
+  border-color: var(--mku-orange);
 }
 
 .btn-link, .dropdown-toggle {
@@ -61,8 +65,11 @@ div.background-image .overlay {
 div.background-image .container {
   text-shadow: 1px 1px 4px rgba(0,0,0,.6);
 }
-.navbar a {
+.navbar a, .item-list-title {
   color: var(--mku-blue);
+}
+.item-list-title {
+  font-weight: bold;
 }
 .navbar-brand img{
   max-width: 300px;
@@ -93,8 +100,30 @@ nav.navbar {
 .footer-widget div div ul li{
   margin-left: 0;
 }
-@media screen and (min-width: 768px) {
-  /* Styles for tablets and larger screens */
 
+.loginDropdownMenu{
+  min-width: 300px;
+}
+.navbar-nav li {
+  font-weight: bold;
+}
+#top-level-communities > a{
+  color: var(--mku-blue);
+}
+ds-community-list-element{
+  a{
+    color: var(--mku-blue);
+  }
+  .lead{
+    font-weight: bold;
+  }
+}
+#p-tl {
+  .mb-4, .my-4 {
+    margin-bottom: .5rem !important;
+  }
+  .mt-4, .my-4 {
+    margin-top: .5rem !important;
+  }
 }
 

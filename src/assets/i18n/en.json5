@@ -806,8 +806,6 @@
 
   "browse.metadata.subject.breadcrumbs": "Browse by Subject",
 
-  "browse.metadata.srsc.breadcrumbs": "Browse by Subject Category",
-
   "browse.metadata.title.breadcrumbs": "Browse by Title",
 
   "pagination.next.button": "Next",
@@ -1602,7 +1600,6 @@
 
   "error.validation.groupExists": "This group already exists",
 
-
   "file-section.error.header": "Error obtaining files for this item",
 
   "error.validation.metadata.name.invalid-pattern": "This field cannot contain dots, commas or spaces. Please use the Element & Qualifier fields instead",
@@ -1623,7 +1620,7 @@
 
   "footer.copyright": "copyright © 2002-{{ year }}",
 
-  "footer.link.dspace": "DSpace software",
+  "footer.link.dspace": "Mount Kenya University",
 
   "footer.link.lyrasis": "LYRASIS",
 
@@ -1843,7 +1840,7 @@
 
   "home.title": "Home",
 
-  "home.top-level-communities.head": "Communities in DSpace",
+  "home.top-level-communities.head": "Browse Communities in Repository",
 
   "home.top-level-communities.help": "Select a community to browse its collections.",
 
@@ -5232,5 +5229,4 @@
   "access-control-option-end-date": "Grant access until",
 
   "access-control-option-end-date-note": "Select the date until which the related access condition is applied",
-
 }
