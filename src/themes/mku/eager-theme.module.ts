@@ -48,6 +48,9 @@ import { ResultsBackButtonModule } from '../../app/shared/results-back-button/re
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
+import {
+  TopLevelCommunityListComponent
+} from './app/home-page/top-level-community-list/top-level-community-list.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -64,6 +67,7 @@ const ENTRY_COMPONENTS = [
   CollectionListElementComponent,
   CollectionDropdownComponent,
   FileDownloadLinkComponent,
+  TopLevelCommunityListComponent,
 ];
 
 const DECLARATIONS = [

@@ -7,11 +7,19 @@
   //--ds-header-icon-color-hover: #{darken($link-color, 15%)};
   --ds-navbar-link-color: #dd9933;
   --mku-blue: #013378;
+  --mku-light-blue: #0066CC;
+  --mku-orange: #dd9933;
+  --ds-header-icon-color: var(--mku-blue);
 }
-.btn-primary {
+.btn-primary.disabled, .btn-primary:disabled, .btn-primary, .badge-info {
   background-color: var(--mku-blue);
   border-color: var(--mku-blue);
 }
+
+.btn-link, .dropdown-toggle {
+  color: var(--mku-blue);
+}
+
 div.background-image {
   color: #fff;
   background-color: #000;
@@ -19,8 +27,25 @@ div.background-image {
   background-size: cover;
   min-height: 350px;
 }
-div.background-image.background-image-6{
+div.background-image.background-image-1{
+  background-image: url(/assets/mku/images/mku_nutrition_group.jpg);
+  background-position: 50% 50%;
+}
+div.background-image.background-image-3{
   background-image: url(/assets/mku/images/mku_dancers_1.jpg);
+  background-position: 50% 50%;
+}
+div.background-image.background-image-5{
+  background-image: url(/assets/mku/images/eresources-1.jpg);
+  background-position: 50% 50%;
+}
+
+div.background-image.background-image-6{
+  background-image: url(/assets/mku/images/eresources-2.jpg);
+  background-position: 50% 50%;
+}
+div.background-image.background-image-7{
+  background-image: url(/assets/mku/images/eresources-3.jpg);
   background-position: 50% 50%;
 }
 
@@ -31,6 +56,7 @@ div.background-image .overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
+  padding-top: 70px;
 }
 div.background-image .container {
   text-shadow: 1px 1px 4px rgba(0,0,0,.6);
@@ -44,7 +70,29 @@ div.background-image .container {
 .bg-light {
   background-color: #e6e6e6 !important;
 }
+nav.navbar {
+  //background-color: var(--mku-blue);
+  //border-bottom: var(--mku-blue);
+}
 
+.top-footer{
+  background: var(--mku-light-blue);
+  a{color: white; }
+}
+.bottom-footer{
+  background: var(--mku-blue);
+  a{color: white; }
+}
+.footer-widget div h2{
+  color: var(--mku-orange)
+}
+.footer-widget div div ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.footer-widget div div ul li{
+  margin-left: 0;
+}
 @media screen and (min-width: 768px) {
   /* Styles for tablets and larger screens */
 

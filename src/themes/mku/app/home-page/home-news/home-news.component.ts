@@ -11,9 +11,19 @@ import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page
  * Component to render the news section on the home page
  */
 export class HomeNewsComponent extends BaseComponent implements OnInit{
-
+  randomClass = 'background-image background-image-1';
   ngOnInit() {
-    console.log('qwerty');
+    let image_classes = [
+      'background-image background-image-1',
+      'background-image background-image-3',
+      'background-image background-image-5',
+      'background-image background-image-6',
+      'background-image background-image-7'
+    ];
+
+    let randomNum = Math.floor(Math.random() * image_classes.length);
+    this.randomClass = image_classes[randomNum];
+
   }
 
 }

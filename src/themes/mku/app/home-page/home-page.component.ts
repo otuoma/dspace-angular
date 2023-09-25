@@ -49,11 +49,19 @@ export class HomePageComponent extends BaseComponent implements OnInit {
     },
     {
         small: 'assets/mku/images/mku-logo.png',
-        medium: 'assets/mku/images/mku_dancers_1.jpg',
-        big: 'assets/mku/images/mku_dancers_1.jpg'
-    }    
+        medium: 'assets/mku/images/eresources-1.jpg',
+        big: 'assets/mku/images/eresources-1.jpg'
+    },
+    {
+        small: 'assets/mku/images/mku-logo.png',
+        medium: 'assets/mku/images/eresources-2.jpg',
+        big: 'assets/mku/images/eresources-2.jpg'
+    },
+    {
+        small: 'assets/mku/images/mku-logo.png',
+        medium: 'assets/mku/images/eresources-3.jpg',
+        big: 'assets/mku/images/eresources-3.jpg'
+    }
   ];
-
   }
-
 }
