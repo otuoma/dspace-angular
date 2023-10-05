@@ -36,5 +36,8 @@ a.nav-link {
 #collections-wrapper{
     opacity: 0.8;
     border: solid 4px var(--iris-blue);
-    border-radius: 4px;
+    border-radius: 6px;
+}
+.btnItem figure img{
+  max-width: 80px;
 }
