@@ -1,0 +1,40 @@
+// Add any global css for the theme here
+
+// imports the base global style
+@import '../../../styles/_global-styles.scss';
+header{
+  background-color: var(--iris-red);
+}
+header .navbar {
+  padding: 4px 0;
+}
+#main-navbar {
+  background-color: #EBEBEB;
+}
+.logo h1 a img{
+  max-width: 100px;
+}
+.jumbotron{
+  background-image: url("/assets/arcoiris/images/library-stock.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.btn-primary {
+  background-color: var(--iris-blue);
+  border-color: var(--iris-blue);
+}
+a.nav-link {
+  color: var(--iris-blue);
+  font-weight: bold;
+}
+.card-img{
+  max-width: 60px;
+}
+.search-form input{
+  opacity: 0.8;
+}
+#collections-wrapper{
+    opacity: 0.8;
+    border: solid 4px var(--iris-blue);
+    border-radius: 4px;
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,wBAAyB;EACvB,UAAU,EAAC,IAAI;;AAGjB,mBAAoB;EAClB,UAAU,EAAE,eAAe",
+"sources": ["vocabulary-treeview.component.scss"],
+"names": [],
+"file": "vocabulary-treeview.component.css"
+}

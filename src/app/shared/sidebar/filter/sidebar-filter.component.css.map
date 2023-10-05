@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAoB;EAClB,MAAM,EAAE,yBAAyB;EACjC,MAAM,EAAE,OAAO;EAEf,kDAA+B;IAC7B,QAAQ,EAAE,MAAM;EAGlB,kCAAe;IACb,WAAW,EAAE,0BAA0B",
+"sources": ["sidebar-filter.component.scss"],
+"names": [],
+"file": "sidebar-filter.component.css"
+}

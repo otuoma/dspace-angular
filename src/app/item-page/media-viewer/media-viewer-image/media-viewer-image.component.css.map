@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,4BAAa;EACX,KAAK,EAAE,gBAAgB;EACvB,MAAM,EAAE,gBAAgB;AAG1B,iCAAkB;EAChB,SAAS,EAAE,gBAAgB;EAE3B,oDAAmB;IACjB,mBAAmB,EAAE,IAAI;AAI7B,uCAAwB;EACtB,WAAW,EAAE,GAAG;EAChB,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,EAAE",
+"sources": ["media-viewer-image.component.scss"],
+"names": [],
+"file": "media-viewer-image.component.css"
+}

@@ -1,0 +1,26 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="search-form">
+      <ds-themed-search-form [inPlaceSearch]="false"
+                             [searchPlaceholder]="'home.search-form.placeholder' | translate">
+      </ds-themed-search-form>
+    </div>
+    <div class="container bg-white rounded-2" id="collections-wrapper">
+      <div class="row row-cols-1 row-cols-md-6 g-4 justify-content-between">
+        <div class="col" *ngFor="let community of topLevelCommunities; let elemIndex = index;">
+          <ng-container>
+            <div class="card h-100 text-center pt-2" style="">
+              <a href="{{ baseUrl }}/communities/{{ community.uuid }}">
+                <img src="/assets/arcoiris/images/community-logo-{{elemIndex+1}}.png" class="card-img" alt="...">
+              </a>
+              <div class="card-body p-0">
+                <h5 class="card-title">{{ community.name }}</h5>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

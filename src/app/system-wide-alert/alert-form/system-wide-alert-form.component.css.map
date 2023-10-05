@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAmB;EAEf,UAAU,EAAE,KAAK",
+"sources": ["system-wide-alert-form.component.scss"],
+"names": [],
+"file": "system-wide-alert-form.component.css"
+}

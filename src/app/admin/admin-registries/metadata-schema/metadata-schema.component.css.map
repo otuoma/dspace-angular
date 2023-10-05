@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,qBAAsB;EACpB,MAAM,EAAE,OAAO;;AAGjB,uCAAwC;EACtC,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI",
+"sources": ["metadata-schema.component.scss"],
+"names": [],
+"file": "metadata-schema.component.css"
+}

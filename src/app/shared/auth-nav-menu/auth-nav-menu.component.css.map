@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,uCAAwC;EACtC,SAAS,EAAE,KAAK;EAChB,OAAO,EAAE,IAAI;;AAGf,kBAAmB;EACjB,UAAU,EAAE,KAAK;;AAGnB;0CAC2C;EACzC,gBAAgB,EAAE,sBAAsB;;AAG1C,wDAAyD;EACvD,KAAK,EAAE,2BAA2B;EAElC,kKAAiB;IACf,KAAK,EAAE,iCAAiC",
+"sources": ["auth-nav-menu.component.scss"],
+"names": [],
+"file": "auth-nav-menu.component.css"
+}

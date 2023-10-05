@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,sBAAsB;AAOtB,WAAW;AAIX,YAAY;AAMZ,2BAA2B;AAC3B,YAAY;AAIZ,kDAAkD;AAkBlD,WAAW",
+"sources": ["../../../../../styles/_bootstrap_variables.scss"],
+"names": [],
+"file": "person.component.css"
+}

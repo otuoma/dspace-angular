@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAU;EACR,gBAAgB,EAAE,0BAA0B",
+"sources": ["dso-page-version-button.component.scss"],
+"names": [],
+"file": "dso-page-version-button.component.css"
+}

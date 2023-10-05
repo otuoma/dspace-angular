@@ -1,0 +1,12 @@
+// Override or add CSS variables for your theme here
+
+:root {
+  //--ds-header-logo-height: 80px;
+  //--ds-header-logo-height-xs: 50px;
+  //--ds-header-icon-color: #{$link-color};
+  //--ds-header-icon-color-hover: #{darken($link-color, 15%)};
+  --iris-red: #DB301E;
+  --ds-header-icon-color: #fff;
+  --iris-blue:#3b3e99;
+  --ds-navbar-link-color: var(--iris-blue);
+}
