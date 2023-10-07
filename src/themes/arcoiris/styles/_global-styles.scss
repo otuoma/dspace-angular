@@ -15,9 +15,10 @@ header .navbar {
   max-width: 100px;
 }
 .jumbotron{
-  background-image: url("/assets/arcoiris/images/library-stock.jpg");
+  background-image: url("/assets/arcoiris/images/837878.jpg");
   background-size: cover;
   background-position: center;
+  padding: 150px;
 }
 .btn-primary {
   background-color: var(--iris-blue);
@@ -91,6 +92,9 @@ hr {
     font-weight: bold;
   }
 }
+h5.card-title{
+  font-size: 1rem;
+}
 
 /*
  * BREADCRUMB
@@ -120,7 +124,6 @@ li.breadcrumb-item {
   }
 }
 
-
 li.breadcrumb-item.active {
   color: var(--ds-breadcrumb-link-active-color);
 }
@@ -132,5 +135,8 @@ li.breadcrumb-item.active {
 
 li.breadcrumb-item a {
   color: var(--iris-blue);
+}
+.jumbotron .search-form input{
+  border: solid var(--iris-blue);
 }
 
