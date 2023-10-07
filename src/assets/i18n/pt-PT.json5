@@ -1,7 +1,5 @@
 {
 
-  // Dspace v7.x > i18n pt-PT > last reviewed 16-06-2023
-
   // "401.help": "You're not authorized to access this page. You can use the button below to get back to the home page.",
   "401.help": "Não está autorizado a aceder a esta página. Pode utilizar o botão em baixo para voltar à página de início.",
 
@@ -331,6 +329,38 @@
 
   // "admin.registries.schema.title": "Metadata Schema Registry",
   "admin.registries.schema.title": "Registo de esquemas de metadados",
+
+  // "admin.access-control.bulk-access.breadcrumbs": "Bulk Access Management",
+  // TODO New key - Add a translation
+  "admin.access-control.bulk-access.breadcrumbs": "Bulk Access Management",
+
+  // "administrativeBulkAccess.search.results.head": "Search Results",
+  // TODO New key - Add a translation
+  "administrativeBulkAccess.search.results.head": "Search Results",
+
+  // "admin.access-control.bulk-access": "Bulk Access Management",
+  // TODO New key - Add a translation
+  "admin.access-control.bulk-access": "Bulk Access Management",
+
+  // "admin.access-control.bulk-access.title": "Bulk Access Management",
+  // TODO New key - Add a translation
+  "admin.access-control.bulk-access.title": "Bulk Access Management",
+
+  // "admin.access-control.bulk-access-browse.header": "Step 1: Select Objects",
+  // TODO New key - Add a translation
+  "admin.access-control.bulk-access-browse.header": "Step 1: Select Objects",
+
+  // "admin.access-control.bulk-access-browse.search.header": "Search",
+  // TODO New key - Add a translation
+  "admin.access-control.bulk-access-browse.search.header": "Search",
+
+  // "admin.access-control.bulk-access-browse.selected.header": "Current selection({{number}})",
+  // TODO New key - Add a translation
+  "admin.access-control.bulk-access-browse.selected.header": "Current selection({{number}})",
+
+  // "admin.access-control.bulk-access-settings.header": "Step 2: Operation to Perform",
+  // TODO New key - Add a translation
+  "admin.access-control.bulk-access-settings.header": "Step 2: Operation to Perform",
 
   // "admin.access-control.epeople.actions.delete": "Delete EPerson",
   "admin.access-control.epeople.actions.delete": "Apagar utilizador",
@@ -1427,6 +1457,14 @@
   // "collection.edit.return": "Back",
   "collection.edit.return": "Voltar",
 
+  // "collection.edit.tabs.access-control.head": "Access Control",
+  // TODO New key - Add a translation
+  "collection.edit.tabs.access-control.head": "Access Control",
+
+  // "collection.edit.tabs.access-control.title": "Collection Edit - Access Control",
+  // TODO New key - Add a translation
+  "collection.edit.tabs.access-control.title": "Collection Edit - Access Control",
+
   // "collection.edit.tabs.curate.head": "Curate",
   "collection.edit.tabs.curate.head": "Curadoria",
 
@@ -1781,6 +1819,14 @@
   // "community.edit.tabs.curate.title": "Community Edit - Curate",
   "community.edit.tabs.curate.title": "Editar comunidade - curadoria",
 
+  // "community.edit.tabs.access-control.head": "Access Control",
+  // TODO New key - Add a translation
+  "community.edit.tabs.access-control.head": "Access Control",
+
+  // "community.edit.tabs.access-control.title": "Community Edit - Access Control",
+  // TODO New key - Add a translation
+  "community.edit.tabs.access-control.title": "Community Edit - Access Control",
+
   // "community.edit.tabs.metadata.head": "Edit Metadata",
   "community.edit.tabs.metadata.head": "Editar metadados",
 
@@ -1913,10 +1959,12 @@
   // "community.all-lists.head": "Subcommunities and Collections",
   "community.all-lists.head": "Sub-comunidade e coleções",
 
-  // "community.sub-collection-list.head": "Collections of this Community",
+  // "community.sub-collection-list.head": "Collections in this Community",
+  // TODO Source message changed - Revise the translation
   "community.sub-collection-list.head": "Coleções desta comunidade",
 
-  // "community.sub-community-list.head": "Communities of this Community",
+  // "community.sub-community-list.head": "Communities in this Community",
+  // TODO Source message changed - Revise the translation
   "community.sub-community-list.head": "Comunidades desta comunidade",
 
   // "cookies.consent.accept-all": "Accept all",
@@ -2189,7 +2237,8 @@
   // "dso-selector.claim.item.create-from-scratch": "Create a new one",
   "dso-selector.claim.item.create-from-scratch": "Criar novo",
 
-  // "dso-selector.results-could-not-be-retrieved": "Something went wrong, please refresh again",
+  // "dso-selector.results-could-not-be-retrieved": "Something went wrong, please refresh again ↻",
+  // TODO Source message changed - Revise the translation
   "dso-selector.results-could-not-be-retrieved": "Algo correu mal, por favor repita",
 
   // "supervision-group-selector.header": "Supervision Group Selector",
@@ -2364,8 +2413,10 @@
   "error.validation.groupExists": "Este grupo já existe!",
 
   // "error.validation.metadata.name.invalid-pattern": "This field cannot contain dots, commas or spaces. Please use the Element & Qualifier fields instead",
+  "error.validation.metadata.name.max-length": "Este campo não pode conter mais de 32 caracteres",
 
   // "error.validation.metadata.name.max-length": "This field may not contain more than 32 characters",
+  // TODO Source message changed - Revise the translation
   "error.validation.metadata.name.max-length": "Este campo não pode conter mais de 32 caracteres",
 
   // "error.validation.metadata.namespace.max-length": "This field may not contain more than 256 characters",
@@ -2713,7 +2764,8 @@
   // "home.breadcrumbs": "Home",
   "home.breadcrumbs": "Página inicial",
 
-  //"home.search-form.placeholder": "Search the repository...",
+  // "home.search-form.placeholder": "Search the repository ...",
+  // TODO Source message changed - Revise the translation
   "home.search-form.placeholder": "pesquisar no repositório...",
 
   // "home.title": "Home",
@@ -2749,7 +2801,7 @@
   // "info.end-user-agreement.title": "End User Agreement",
   "info.end-user-agreement.title": "Termos de Uso",
 
-  //  "info.end-user-agreement.hosting-country": "the United States",
+  // "info.end-user-agreement.hosting-country": "the United States",
   "info.end-user-agreement.hosting-country": "Portugal",
 
   // "info.privacy.breadcrumbs": "Privacy Statement",
@@ -2797,7 +2849,8 @@
   // "info.feedback.page-label": "Page",
   "info.feedback.page-label": "Página/URL de contexo:",
 
-  // "info.feedback.page_help": "The page related to your feedback",
+  // "info.feedback.page_help": "Tha page related to your feedback",
+  // TODO Source message changed - Revise the translation
   "info.feedback.page_help": "Esta é a página/URL que contextualiza o seu contacto.",
 
   // "item.alerts.private": "This item is non-discoverable",
@@ -3340,6 +3393,14 @@
   // "item.edit.curate.title": "Curate Item: {{item}}",
   "item.edit.curate.title": "Curar item: {{item}}",
 
+  // "item.edit.tabs.access-control.head": "Access Control",
+  // TODO New key - Add a translation
+  "item.edit.tabs.access-control.head": "Access Control",
+
+  // "item.edit.tabs.access-control.title": "Item Edit - Access Control",
+  // TODO New key - Add a translation
+  "item.edit.tabs.access-control.title": "Item Edit - Access Control",
+
   // "item.edit.tabs.metadata.head": "Metadata",
   "item.edit.tabs.metadata.head": "Metadados do item",
 
@@ -3663,12 +3724,15 @@
 
   // "item.preview.dc.relation.issn": "ISSN",
   "item.preview.dc.relation.issn": "ISSN",
+
   // "item.preview.dc.identifier.isbn": "ISBN",
   "item.preview.dc.identifier.isbn": "ISBN",
+
   // "item.preview.dc.identifier": "Identifier:",
   "itemm.preview.dc.identifier": "Identificador:",
 
-  // "item.preview.dc.relation.ispartof": "Journal or Serie",
+  // "item.preview.dc.relation.ispartof": "Journal or Series",
+  // TODO Source message changed - Revise the translation
   "item.preview.dc.relation.ispartof": "Revista ou Série",
 
   // "item.preview.dc.identifier.doi": "DOI",
@@ -4156,6 +4220,10 @@
 
   // "menu.section.access_control_authorizations": "Authorizations",
   "menu.section.access_control_authorizations": "Autorizações",
+
+  // "menu.section.access_control_bulk": "Bulk Access Management",
+  // TODO New key - Add a translation
+  "menu.section.access_control_bulk": "Bulk Access Management",
 
   // "menu.section.access_control_groups": "Groups",
   "menu.section.access_control_groups": "Grupos",
@@ -5936,7 +6004,8 @@
   // "submission.import-external.source.vufind": "VuFind",
   "submission.import-external.source.vufind": "VuFind",
 
-  // "submission.import-external.source.wos": "Web of Science",
+  // "submission.import-external.source.wos": "Web Of Science",
+  // TODO Source message changed - Revise the translation
   "submission.import-external.source.wos": "Web of Science",
 
   // "submission.import-external.source.orcidWorks": "ORCID",
@@ -5963,10 +6032,12 @@
   // "submission.import-external.source.orcid": "ORCID",
   "submission.import-external.source.orcid": "ORCID",
 
-  // "submission.import-external.source.pubmed": "PubMed",
+  // "submission.import-external.source.pubmed": "Pubmed",
+  // TODO Source message changed - Revise the translation
   "submission.import-external.source.pubmed": "PubMed",
 
-  // "submission.import-external.source.pubmedeu": "PubMed Europe",
+  // "submission.import-external.source.pubmedeu": "Pubmed Europe",
+  // TODO Source message changed - Revise the translation
   "submission.import-external.source.pubmedeu": "PubMed Europa",
 
   // "submission.import-external.source.lcname": "Library of Congress Names",
@@ -6260,7 +6331,7 @@
   // "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfProject": "Funder of the Project",
   "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfProject": "Financiador do projeto",
 
-  //"submission.sections.describe.relationship-lookup.selection-tab.search-form.placeholder": "Search...",
+  // "submission.sections.describe.relationship-lookup.selection-tab.search-form.placeholder": "Search...",
   "submission.sections.describe.relationship-lookup.selection-tab.search-form.placeholder": "Pesquisar...",
 
   // "submission.sections.describe.relationship-lookup.selection-tab.tab-title": "Current Selection ({{ count }})",
@@ -7580,7 +7651,8 @@
   // "person.page.orcid.synchronization-mode.label": "Synchronization mode",
   "person.page.orcid.synchronization-mode.label": "Modo sincronização",
 
-  // "person.page.orcid.synchronization-mode-message": "Please select how you would like synchronization to ORCID to occur. The options include 'Manual' (you must send your data to ORCID manually), or 'Batch' (the system will send your data to ORCID via a scheduled script).",
+  // "person.page.orcid.synchronization-mode-message": "Please select how you would like synchronization to ORCID to occur. The options include \"Manual\" (you must send your data to ORCID manually), or \"Batch\" (the system will send your data to ORCID via a scheduled script).",
+  // TODO Source message changed - Revise the translation
   "person.page.orcid.synchronization-mode-message": "Por favor, selecione a forma como deseja que a sincronização com ORCID ocorra. As opções incluem 'Manual' (deve enviar os seus dados para o ORCID manualmente), ou 'Batch' (o sistema enviará os seus dados para o ORCID através de um script agendado).",
 
   // "person.page.orcid.synchronization-mode-funding-message": "Select whether to send your linked Project entities to your ORCID record's list of funding information.",
@@ -7703,122 +7775,106 @@
   // "admin.system-wide-alert.title": "System-wide Alerts",
   "admin.system-wide-alert.title": "Alertas gerais do sistema",
 
+  // "item-access-control-title": "This form allows you to perform changes to the access conditions of the item's metadata or its bitstreams.",
+  // TODO New key - Add a translation
+  "item-access-control-title": "This form allows you to perform changes to the access conditions of the item's metadata or its bitstreams.",
+
+  // "collection-access-control-title": "This form allows you to perform changes to the access conditions of all the items owned by this collection. Changes may be performed to either all Item metadata or all content (bitstreams).",
+  // TODO New key - Add a translation
+  "collection-access-control-title": "This form allows you to perform changes to the access conditions of all the items owned by this collection. Changes may be performed to either all Item metadata or all content (bitstreams).",
+
+  // "community-access-control-title": "This form allows you to perform changes to the access conditions of all the items owned by any collection under this community. Changes may be performed to either all Item metadata or all content (bitstreams).",
+  // TODO New key - Add a translation
+  "community-access-control-title": "This form allows you to perform changes to the access conditions of all the items owned by any collection under this community. Changes may be performed to either all Item metadata or all content (bitstreams).",
+
+  // "access-control-item-header-toggle": "Item's Metadata",
+  // TODO New key - Add a translation
+  "access-control-item-header-toggle": "Item's Metadata",
+
+  // "access-control-bitstream-header-toggle": "Bitstreams",
+  // TODO New key - Add a translation
+  "access-control-bitstream-header-toggle": "Bitstreams",
+
+  // "access-control-mode": "Mode",
+  // TODO New key - Add a translation
+  "access-control-mode": "Mode",
+
+  // "access-control-access-conditions": "Access conditions",
+  // TODO New key - Add a translation
+  "access-control-access-conditions": "Access conditions",
+
+  // "access-control-no-access-conditions-warning-message": "Currently, no access conditions are specified below. If executed, this will replace the current access conditions with the default access conditions inherited from the owning collection.",
+  // TODO New key - Add a translation
+  "access-control-no-access-conditions-warning-message": "Currently, no access conditions are specified below. If executed, this will replace the current access conditions with the default access conditions inherited from the owning collection.",
+
+  // "access-control-replace-all": "Replace access conditions",
+  // TODO New key - Add a translation
+  "access-control-replace-all": "Replace access conditions",
+
+  // "access-control-add-to-existing": "Add to existing ones",
+  // TODO New key - Add a translation
+  "access-control-add-to-existing": "Add to existing ones",
+
+  // "access-control-limit-to-specific": "Limit the changes to specific bitstreams",
+  // TODO New key - Add a translation
+  "access-control-limit-to-specific": "Limit the changes to specific bitstreams",
+
+  // "access-control-process-all-bitstreams": "Update all the bitstreams in the item",
+  // TODO New key - Add a translation
+  "access-control-process-all-bitstreams": "Update all the bitstreams in the item",
+
+  // "access-control-bitstreams-selected": "bitstreams selected",
+  // TODO New key - Add a translation
+  "access-control-bitstreams-selected": "bitstreams selected",
+
+  // "access-control-cancel": "Cancel",
+  // TODO New key - Add a translation
+  "access-control-cancel": "Cancel",
+
+  // "access-control-execute": "Execute",
+  // TODO New key - Add a translation
+  "access-control-execute": "Execute",
+
+  // "access-control-add-more": "Add more",
+  // TODO New key - Add a translation
+  "access-control-add-more": "Add more",
+
+  // "access-control-select-bitstreams-modal.title": "Select bitstreams",
+  // TODO New key - Add a translation
+  "access-control-select-bitstreams-modal.title": "Select bitstreams",
+
+  // "access-control-select-bitstreams-modal.no-items": "No items to show.",
+  // TODO New key - Add a translation
+  "access-control-select-bitstreams-modal.no-items": "No items to show.",
+
+  // "access-control-select-bitstreams-modal.close": "Close",
+  // TODO New key - Add a translation
+  "access-control-select-bitstreams-modal.close": "Close",
+
+  // "access-control-option-label": "Access condition type",
+  // TODO New key - Add a translation
+  "access-control-option-label": "Access condition type",
+
+  // "access-control-option-note": "Choose an access condition to apply to selected objects.",
+  // TODO New key - Add a translation
+  "access-control-option-note": "Choose an access condition to apply to selected objects.",
+
+  // "access-control-option-start-date": "Grant access from",
+  // TODO New key - Add a translation
+  "access-control-option-start-date": "Grant access from",
+
+  // "access-control-option-start-date-note": "Select the date from which the related access condition is applied",
+  // TODO New key - Add a translation
+  "access-control-option-start-date-note": "Select the date from which the related access condition is applied",
+
+  // "access-control-option-end-date": "Grant access until",
+  // TODO New key - Add a translation
+  "access-control-option-end-date": "Grant access until",
+
+  // "access-control-option-end-date-note": "Select the date until which the related access condition is applied",
+  // TODO New key - Add a translation
+  "access-control-option-end-date-note": "Select the date until which the related access condition is applied",
 
 
-  // Other strings...
-  // Missing, Duplicate or Redundant ???
-
-  // NOT FOUND 16-06-2023
-
-  // "browse.metadata.srsc": "Subject Category",
-  "browse.metadata.srsc": "vocabulário controlado (SRSC)",
-
-  // "mydspace.status.archived": "Archived",
-  "mydspace.status.archived": "Depositado",
-
-  // "mydspace.status.validation": "Validation",
-  "mydspace.status.validation": "Em validação",
-
-  // "mydspace.status.waiting-for-controller": "Waiting for Controller",
-  "mydspace.status.waiting-for-controller": "Aguarda validador",
-
-  // "mydspace.status.workflow": "Workflow",
-  "mydspace.status.workflow": "Em fluxo de trabalho",
-
-  // "mydspace.status.workspace": "Workspace",
-  "mydspace.status.workspace": "Depósito por terminar",
-
-  // "search.filters.namedresourcetype.Archived": "Archived",
-  "search.filters.namedresourcetype.Archived": "Depositado",
-
-  // "search.filters.namedresourcetype.Validation": "Validation",
-  "search.filters.namedresourcetype.Validation": "Em validação",
-
-  // "search.filters.namedresourcetype.waitingforcontroller": "Waiting for Controller",
-  "search.filters.namedresourcetype.waitingforcontroller": "Aguarda validador",
-
-  // "search.filters.namedresourcetype.Workflow": "Workflow",
-  "search.filters.namedresourcetype.Workflow": "Em fluxo de trabalho",
-
-  // "search.filters.namedresourcetype.Workspace": "Workspace",
-  "search.filters.namedresourcetype.Workspace": "Por terminar",
-
-  // "datafile.listelement.badge": "Data file",
-  "datafile.listelement.badge": "Ficheiro de dados",
-
-  // "datapackage.listelement.badge": "Data package",
-  "datapackage.listelement.badge": "Pacote de dados",
-
-  // "browse.next.button": "Next",
-  "browse.next.button": "Próximo",
-
-  // "browse.previous.button": "Previous",
-  "browse.previous.button": "Anterior",
-
-  // "curation-task.task.registerdoi.label": "DOI check",
-  "curation-task.task.registerdoi.label": "Verificação de DOIs",
-
-  // "mydspace.general.text-here": "here",
-  "mydspace.general.text-here": "aqui",
-
-  // "mydspace.upload.upload-successful": "New workspace item created. Click {{here}} for edit it.",
-  "mydspace.upload.upload-successful": "Novo item de espaço de trabalho criado. Clique {{here}} para o editar.",
-
-  // "profile.security.form.notifications.error.not-long-enough": "The password has to be at least 6 characters long.",
-  "profile.security.form.notifications.error.not-long-enough": "A senha deve ter pelo menos 6 caracteres.",
-
-  // "register-page.create-profile.security.error.password-length": "The password should be at least 6 characters long.",
-  "register-page.create-profile.security.error.password-length": "A senha deve possuir pelo menos 6 caracteres.",
-
-  // "search.form.search_mydspace": "Search MyDSpace",
-  "search.form.search_mydspace": "Pesquisar na área pessoal",
-
-  // "forgot-password.form.error.password-length": "The password should be at least 6 characters long.",
-  "forgot-password.form.error.password-length": "A senha deve ter pelo menos 6 caracteres.",
-
-  // "search.filters.entityType.Publication": "Publication",
-  "search.filters.entityType.Publication": "Publicação",
-
-  // "search.filters.entityType.Person": "Person",
-  "search.filters.entityType.Person": "Pessoa",
-
-  // "search.filters.entityType.Project": "Project",
-  "search.filters.entityType.Project": "Projeto",
-
-  // "search.filters.entityType.Journal": "Journal",
-  "search.filters.entityType.Journal": "Revista",
-
-  // "search.filters.entityType.DataFile": "Data File",
-  "search.filters.entityType.DataFile": "Ficheiro de dados",
-
-  // "forgot-email.form.google-recaptcha.must-accept-cookies": "Must accept cookies",
-  "forgot-email.form.google-recaptcha.must-accept-cookies": "Deve aceitar cookies",
-
-  // "forgot-email.form.google-recaptcha.open-cookie-settings": "Cookie settings",
-  "forgot-email.form.google-recaptcha.open-cookie-settings": "Configurar cookies",
-
-  // "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.added.local-entity": "Successfully imported and added external project to the selection",
-  "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.added.local-entity": "Importado com sucesso e adicionado autor à seleção",
-
-  // "orgunit.search.results.head": "Organizational Unit Search Results",
-  "orgunit.search.results.head": "Resultados da pesquisa de organizações",
-
-  // "orgunit-relationships.search.results.head": "Organizational Unit Search Results",
-  "orgunit-relationships.search.results.head": "Resultados da pesquisa de organizações",
-
-  // "journalissue.search.results.head": "Journal Issue Search Results",
-  "journalissue.search.results.head": "Resultados da pesquisa de números",
-
-  // "journalissue-relationships.search.results.head": "Journal Issue Search Results",
-  "journalissue-relationships.search.results.head": "Resultados da pesquisa de números",
-
-  // "grant-request-copy.email.message": "Dear {{ recipientName }},\nIn response to your request I have the pleasure to send you in attachment a copy of the file(s) concerning the document: \"{{ itemUrl }}\" ({{ itemName }}), of which I am an author.\n\nBest regards,\n{{ authorName }} <{{ authorEmail }}>",
-  "grant-request-copy.email.message": "Caro {{ recipientName }},\nEm resposta ao seu pedido de cópia, tenho o prazer de lhe enviar em anexo uma cópia do(s) ficheiro(s) relativo(s) ao documento: \"{{ itemUrl }}\" ({{ itemName }}), do qual sou autor.\n\nCom os melhores cumprimentos,\n{{ authorName }} <{{ authorEmail }}>",
-
-  // "item.preview.dc.relation.eissn": "EISSN",
-  "item.preview.dc.relation.eissn": "EISSN",
-
-  // "item.preview.dc.identifier.eisbn": "EISBN",
-  "item.preview.dc.identifier.eisbn": "EISBN",
 
 }

@@ -1616,7 +1616,7 @@
 
   "file-section.error.header": "Error obtaining files for this item",
 
-  "footer.copyright": "copyright © 2002-{{ year }}",
+  "footer.copyright": "Copyright © {{ year }}",
 
   "footer.link.dspace": "DSpace software",
 
@@ -2816,7 +2816,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "Browse Repository",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -3494,7 +3494,7 @@
 
   "repository.title": "DSpace Repository",
 
-  "repository.title.prefix": "DSpace Repository :: ",
+  "repository.title.prefix": "Repository :: ",
 
   "resource-policies.add.button": "Add",
 
@@ -4726,7 +4726,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  "title": "DSpace",
+  title: "DSpace",
 
   "vocabulary-treeview.header": "Hierarchical tree view",
 
@@ -5215,5 +5215,4 @@
   "access-control-option-end-date": "Grant access until",
 
   "access-control-option-end-date-note": "Select the date until which the related access condition is applied",
-
 }

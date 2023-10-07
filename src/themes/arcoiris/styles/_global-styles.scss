@@ -3,7 +3,7 @@
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
 header{
-  background-color: var(--iris-red);
+  background-color: var(--iris-blue);
 }
 header .navbar {
   padding: 4px 0;
@@ -23,6 +23,9 @@ header .navbar {
   background-color: var(--iris-blue);
   border-color: var(--iris-blue);
 }
+a{
+  color: var(--iris-blue)
+}
 a.nav-link {
   color: var(--iris-blue);
   font-weight: bold;
@@ -40,4 +43,35 @@ a.nav-link {
 }
 .btnItem figure img{
   max-width: 80px;
+}
+.badge-info {
+  background-color: var(--iris-blue);
+}
+.item-list-title{
+  font-weight: bold;
+}
+.expandButton, .collapseButton{
+  color: var(--iris-blue)
+}
+.item-list-abstract{
+  text-align: justify;
+}
+footer{
+  background-color: var(--iris-blue);
+}
+hr {
+  border-top: 1px solid white;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+  background-color: var(--iris-blue);
+  border-color: var(--iris-blue);
+}
+.comcol-header{
+  background-color: white;
+}
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: var(--iris-blue);
+  border-color: var(--iris-blue);
 }
