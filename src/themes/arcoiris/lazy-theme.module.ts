@@ -89,7 +89,7 @@ import {
 import {
   EditItemTemplatePageComponent
 } from './app/collection-page/edit-item-template-page/edit-item-template-page.component';
-import { LoadingComponent } from './app/shared/loading/loading.component';
+// import { LoadingComponent } from './app/shared/loading/loading.component';
 import { SearchResultsComponent } from './app/shared/search/search-results/search-results.component';
 import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
 import { ComcolPageBrowseByComponent } from './app/shared/comcol-page-browse-by/comcol-page-browse-by.component';
@@ -156,9 +156,11 @@ import { ItemStatusComponent } from './app/item-page/edit-item-page/item-status/
 import { EditBitstreamPageComponent } from './app/bitstream-page/edit-bitstream-page/edit-bitstream-page.component';
 import { FormModule } from '../../app/shared/form/form.module';
 import { RequestCopyModule } from 'src/app/request-copy/request-copy.module';
+import {HomeNewsComponent} from './app/home-page/home-news/home-news.component';
 
 const DECLARATIONS = [
   FileSectionComponent,
+  HomeNewsComponent,
   HomePageComponent,
   RootComponent,
   BrowseBySwitcherComponent,
@@ -202,7 +204,7 @@ const DECLARATIONS = [
   AuthNavMenuComponent,
   ExpandableNavbarSectionComponent,
   EditItemTemplatePageComponent,
-  LoadingComponent,
+  // LoadingComponent,
   SearchResultsComponent,
   AdminSidebarComponent,
   SearchSettingsComponent,

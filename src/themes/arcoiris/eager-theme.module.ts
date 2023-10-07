@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../app/shared/shared.module';
-import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { SearchNavbarComponent } from './app/search-navbar/search-navbar.component';
 import { HeaderComponent } from './app/header/header.component';
@@ -54,6 +53,7 @@ import {
   ItemSearchResultListElementComponent
 } from './app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component';
 import { TopLevelCommunityListComponent } from './app/home-page/top-level-community-list/top-level-community-list.component';
+// import {LoadingComponent} from './app/shared/loading/loading.component';
 
 
 /**
@@ -79,11 +79,11 @@ const ENTRY_COMPONENTS = [
 
 const DECLARATIONS = [
   ...ENTRY_COMPONENTS,
-  HomeNewsComponent,
   HeaderComponent,
   HeaderNavbarWrapperComponent,
   NavbarComponent,
   SearchNavbarComponent,
+  // LoadingComponent,
   FooterComponent,
   CreateCollectionParentSelectorComponent,
   CreateCommunityParentSelectorComponent,

@@ -75,3 +75,62 @@ hr {
   background-color: var(--iris-blue);
   border-color: var(--iris-blue);
 }
+.btn-outline-primary {
+  color: var(--iris-blue);
+  border-color: var(--iris-blue);
+}
+#recent-items-list{
+  .border-bottom{
+    display: none;
+    border-bottom: none !important;
+  }
+  h2{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6 !important;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+}
+
+/*
+ * BREADCRUMB
+ */
+.nav-breadcrumb {
+  background-color: var(--ds-breadcrumb-bg);
+}
+
+.breadcrumb {
+  border-radius: 0;
+  margin-top: calc(-1 * var(--ds-content-spacing));
+  padding-bottom: var(--ds-content-spacing / 3);
+  padding-top: var(--ds-content-spacing / 3);
+  background-color: var(--ds-breadcrumb-bg);
+}
+
+li.breadcrumb-item {
+  display: flex;
+}
+
+.breadcrumb-item-limiter {
+  display: inline-block;
+  max-width: var(--ds-breadcrumb-max-length);
+  > * {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+
+li.breadcrumb-item.active {
+  color: var(--ds-breadcrumb-link-active-color);
+}
+
+.breadcrumb-item+ .breadcrumb-item::before {
+  display: block;
+  content: quote("•") !important;
+}
+
+li.breadcrumb-item a {
+  color: var(--iris-blue);
+}
+

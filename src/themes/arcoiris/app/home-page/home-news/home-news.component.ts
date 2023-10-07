@@ -1,21 +1,18 @@
-import { Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
-// import { Observable, throwError } from 'rxjs';
-// import { catchError, retry } from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'ds-home-news',
   styleUrls: ['../../../../../app/home-page/home-news/home-news.component.scss'],
   templateUrl: './home-news.component.html'
 })
-export class HomeNewsComponent extends BaseComponent implements OnInit{
-  communityModel = {
-    name: undefined,
-    url: undefined,
-    image: undefined,
-  };
+export class HomeNewsComponent extends BaseComponent implements OnInit, OnDestroy{
+  routeSub: Subscription;
+  collectionSpinner = true;
+  spinnerMessage = 'Largando comunidades';
   topLevelCommunities: [{
     name: string,
     url: string,
@@ -24,7 +21,7 @@ export class HomeNewsComponent extends BaseComponent implements OnInit{
     uuid: string
   }] = [{name: '', url: '', logo: '', itemCount: 0, uuid: ''}];
   baseUrl = 'https://repositorio.arcoiris.edu.pe';
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, private activeRoute: ActivatedRoute) {
     super();
   }
 
@@ -35,31 +32,32 @@ export class HomeNewsComponent extends BaseComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.getTopLevelCollections().subscribe(resp=>{
+    this.routeSub = this.activeRoute.params.subscribe(val => {
 
-      console.log('====================');
-      console.log(resp);
-      console.log('====================');
+      this.getTopLevelCollections().subscribe(resp=>{
 
-      if (resp._embedded.communities.length > 0){
+        if (resp._embedded.communities.length > 0){
 
-        resp._embedded.communities.forEach((community, index)=>{
-          let communityInstance = {
-            name: community.name,
-            url: community.url,
-            logo: community._links.logo.href,
-            itemCount: community.archivedItemsCount,
-            uuid: community.uuid
-          };
-          this.topLevelCommunities.push(communityInstance);
-        });
-        this.topLevelCommunities.splice(0, 1);
-      }
+          resp._embedded.communities.forEach((community, index)=>{
+            let communityInstance = {
+              name: community.name,
+              url: community.url,
+              logo: community._links.logo.href,
+              itemCount: community.archivedItemsCount,
+              uuid: community.uuid
+            };
+            this.topLevelCommunities.push(communityInstance);
+          });
+          this.topLevelCommunities.splice(0, 1);
+          this.collectionSpinner = false;
+        }
+      });
     });
 
-    console.log('=======OnInit=======');
-    console.log(this.topLevelCommunities);
-    console.log('====================');
+  }
+
+  ngOnDestroy(): void {
+    this.routeSub.unsubscribe();
   }
 }
 

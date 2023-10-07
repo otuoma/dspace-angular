@@ -301,9 +301,10 @@ const DECLARATIONS = [
     RequestCopyModule,
   ],
   declarations: DECLARATIONS,
-  exports: [
-    CommunityPageSubCollectionListComponent
-  ]
+    exports: [
+        CommunityPageSubCollectionListComponent,
+        LoadingComponent
+    ]
 })
 
   /**

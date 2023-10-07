@@ -6,10 +6,13 @@
       </ds-themed-search-form>
     </div>
     <div class="container bg-white rounded-2" id="collections-wrapper">
-      <div class="row row-cols-1 row-cols-md-6 g-4 justify-content-between">
+
+      <div class="row row-cols-1 row-cols-md-6 text-center" *ngIf='collectionSpinner'>
+        <ds-loading [message]="spinnerMessage" showMessage="true"></ds-loading>
+      </div>
+      <div class="row row-cols-1 row-cols-md-6 g-4 justify-content-between" *ngIf="!collectionSpinner">
         <div class="col" *ngFor="let community of topLevelCommunities; let elemIndex = index;">
-          <ng-container>
-            <div class="card h-100 text-center pt-2" style="">
+            <div class="card h-100 text-center pt-2">
               <a href="{{ baseUrl }}/communities/{{ community.uuid }}">
                 <img src="/assets/arcoiris/images/community-logo-{{elemIndex+1}}.png" class="card-img" alt="...">
               </a>
@@ -17,9 +20,7 @@
                 <h5 class="card-title">{{ community.name }}</h5>
               </div>
             </div>
-          </ng-container>
         </div>
-
       </div>
     </div>
   </div>
