@@ -1,25 +1,24 @@
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
+  <div class="container" #jumbotronContainer>
     <div class="search-form">
       <ds-themed-search-form [inPlaceSearch]="false"
                              [searchPlaceholder]="'home.search-form.placeholder' | translate">
       </ds-themed-search-form>
     </div>
     <div class="container bg-white rounded-2" id="collections-wrapper">
-
       <div class="row row-cols-1 row-cols-md-6 text-center" *ngIf='collectionSpinner'>
         <ds-loading [message]="spinnerMessage" showMessage="true"></ds-loading>
       </div>
       <div class="row row-cols-1 row-cols-md-6 g-4 justify-content-between" *ngIf="!collectionSpinner">
         <div class="col" *ngFor="let community of topLevelCommunities; let elemIndex = index;">
-            <div class="card h-100 text-center pt-2">
-              <a href="{{ baseUrl }}/communities/{{ community.uuid }}">
-                <img src="/assets/arcoiris/images/community-logo-{{elemIndex+1}}.png" class="card-img" alt="...">
-              </a>
-              <div class="card-body p-0">
-                <h5 class="card-title">{{ community.name }}</h5>
-              </div>
+          <div class="card h-100 text-center pt-2">
+            <a href="{{ baseUrl }}/communities/{{ community.uuid }}">
+              <img src="/assets/arcoiris/images/community-logo-{{elemIndex+1}}.png" class="card-img" alt="...">
+            </a>
+            <div class="card-body p-0">
+              <h5 class="card-title">{{ community.name }}</h5>
             </div>
+          </div>
         </div>
       </div>
     </div>
