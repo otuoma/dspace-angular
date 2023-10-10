@@ -2,7 +2,6 @@ import {Component, ElementRef, OnInit, ViewChild, EventEmitter, Output} from '@a
 import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'ds-home-news',
@@ -23,8 +22,7 @@ export class HomeNewsComponent extends BaseComponent implements OnInit{
   baseUrl = 'https://repositorio.arcoiris.edu.pe';
   @Output() collectionsLoaded = new EventEmitter<void>();
   constructor(
-    private httpClient: HttpClient,
-    private activeRoute: ActivatedRoute
+    private httpClient: HttpClient
   ) {
     super();
   }

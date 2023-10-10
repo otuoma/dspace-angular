@@ -2816,7 +2816,7 @@
 
   "menu.section.browse_community_by_title": "Por titulo",
 
-  "menu.section.browse_global": "Browse Repository",
+  "menu.section.browse_global": "Explorar el repositorio",
 
   "menu.section.browse_global_by_author": "Por autor",
 
@@ -3494,7 +3494,7 @@
 
   "repository.title": "DSpace Repository",
 
-  "repository.title.prefix": "Repository :: ",
+  "repository.title.prefix": "Repositorio :: ",
 
   "resource-policies.add.button": "Agregar",
 

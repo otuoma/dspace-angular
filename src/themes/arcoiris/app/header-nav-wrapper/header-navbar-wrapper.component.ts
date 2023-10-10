@@ -8,8 +8,8 @@ import { HeaderNavbarWrapperComponent as BaseComponent } from '../../../../app/h
   selector: 'ds-header-navbar-wrapper',
   // styleUrls: ['header-navbar-wrapper.component.scss'],
   styleUrls: ['../../../../app/header-nav-wrapper/header-navbar-wrapper.component.scss'],
-  // templateUrl: 'header-navbar-wrapper.component.html',
-  templateUrl: '../../../../app/header-nav-wrapper/header-navbar-wrapper.component.html',
+  templateUrl: 'header-navbar-wrapper.component.html',
+  // templateUrl: '../../../../app/header-nav-wrapper/header-navbar-wrapper.component.html',
 })
 export class HeaderNavbarWrapperComponent extends BaseComponent {
 }
