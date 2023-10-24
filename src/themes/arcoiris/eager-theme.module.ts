@@ -64,6 +64,7 @@ const ENTRY_COMPONENTS = [
   JournalComponent,
   JournalIssueComponent,
   JournalVolumeComponent,
+  HeaderComponent,
   PublicationComponent,
   UntypedItemComponent,
   CommunityListElementComponent,
@@ -79,7 +80,6 @@ const ENTRY_COMPONENTS = [
 
 const DECLARATIONS = [
   ...ENTRY_COMPONENTS,
-  HeaderComponent,
   HeaderNavbarWrapperComponent,
   NavbarComponent,
   SearchNavbarComponent,

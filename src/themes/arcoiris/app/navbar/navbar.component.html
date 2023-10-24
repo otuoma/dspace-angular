@@ -1,5 +1,4 @@
-
-<nav class="navbar navbar-light p-0 navbar-expand-md">
+<nav class="navbar navbar-light p-0">
   <div class="container bg-light">
     <div class="logo">
       <a class="navbar-brand" routerLink="/home">
@@ -8,7 +7,7 @@
       </a>
     </div>
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNav">
-      <ul class="navbar-nav mr-0 ">
+      <ul class="navbar-nav mr-0">
         <li *ngIf="(isXsOrSm$ | async) && (isAuthenticated$ | async)">
           <ds-user-menu [inExpandableNavbar]="true"></ds-user-menu>
         </li>

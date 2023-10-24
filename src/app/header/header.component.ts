@@ -27,5 +27,6 @@ export class HeaderComponent {
 
   public toggleNavbar(): void {
     this.menuService.toggleMenu(this.menuID);
+    console.log(`menu ID is ---- ${this.menuID}---`);
   }
 }

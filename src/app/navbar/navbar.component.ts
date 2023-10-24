@@ -38,13 +38,13 @@ export class NavbarComponent extends MenuComponent {
   public isXsOrSm$: Observable<boolean>;
 
   constructor(protected menuService: MenuService,
-    protected injector: Injector,
+              protected injector: Injector,
               public windowService: HostWindowService,
               public browseService: BrowseService,
               public authorizationService: AuthorizationDataService,
               public route: ActivatedRoute,
               protected themeService: ThemeService,
-              private store: Store<AppState>,
+              protected store: Store<AppState>,
   ) {
     super(menuService, injector, authorizationService, route, themeService);
   }
