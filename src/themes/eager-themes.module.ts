@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-
-// import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme.module';
 import { EagerThemeModule as MKUEagerThemeModule } from './mku/eager-theme.module';
 
 /**
@@ -10,9 +8,6 @@ import { EagerThemeModule as MKUEagerThemeModule } from './mku/eager-theme.modul
  *
  * Themes that aren't in use should not be imported here so they don't take up unnecessary space in the main bundle.
  */
-@NgModule({
-  imports: [
-    MKUEagerThemeModule],
-})
+@NgModule({imports: [MKUEagerThemeModule]})
 export class EagerThemesModule {
 }

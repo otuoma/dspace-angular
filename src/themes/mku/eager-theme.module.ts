@@ -51,6 +51,7 @@ import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.compon
 import {
   TopLevelCommunityListComponent
 } from './app/home-page/top-level-community-list/top-level-community-list.component';
+import {HighchartsChartModule} from 'highcharts-angular';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -67,7 +68,6 @@ const ENTRY_COMPONENTS = [
   CollectionListElementComponent,
   CollectionDropdownComponent,
   FileDownloadLinkComponent,
-  TopLevelCommunityListComponent,
 ];
 
 const DECLARATIONS = [
@@ -76,6 +76,7 @@ const DECLARATIONS = [
   HeaderComponent,
   HeaderNavbarWrapperComponent,
   NavbarComponent,
+  TopLevelCommunityListComponent,
   SearchNavbarComponent,
   LangSwitchComponent,
   FooterComponent,
@@ -84,8 +85,7 @@ const DECLARATIONS = [
   CreateItemParentSelectorComponent,
   EditCollectionSelectorComponent,
   EditCommunitySelectorComponent,
-  EditItemSelectorComponent,
-
+  EditItemSelectorComponent
 ];
 
 @NgModule({
@@ -99,7 +99,8 @@ const DECLARATIONS = [
     ItemPageModule,
     ItemSharedModule,
     DsoPageModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    HighchartsChartModule,
   ],
   declarations: DECLARATIONS,
   providers: [

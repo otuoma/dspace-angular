@@ -4,8 +4,14 @@
       <div class="d-flex flex-wrap">
         <div class="news-spacer"></div>
         <div>
-          <h1 class="display-5">Institutional Repository</h1>
-          <p class="lead">
+
+          <div class="container pt-2 px-4">
+            <h4 class="mb-3 text-center">Search the Repository</h4>
+            <ds-search-form [inPlaceSearch]="false"
+                            [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-search-form>
+          </div>
+
+          <p class="lead text-center">
             The Institutional Repository is a digital hub for scholarly communication and knowledge
             dissemination which serves as a vital resource for researchers, students and the wider
             academic community. Content comprises of research publications, theses, conference

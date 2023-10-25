@@ -182,6 +182,7 @@ const DECLARATIONS = [
   ExternalSourceEntryImportModalComponent,
   ResultsBackButtonComponent,
   DsoEditMetadataComponent,
+  // TopLevelCommunityListComponent
 ];
 
 @NgModule({
