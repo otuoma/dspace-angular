@@ -31,6 +31,7 @@ export class TopLevelCommunityListComponent extends BaseComponent implements OnI
       {
         type: 'pie',
         data: this.rawData,
+        name: 'Knowledge Wheel'
       },
     ],
     plotOptions: {
