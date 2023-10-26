@@ -33,7 +33,7 @@ import { BrowserAuthRequestService } from '../../app/core/auth/browser-auth-requ
 import { BrowserInitService } from './browser-init.service';
 import { ReferrerService } from '../../app/core/services/referrer.service';
 import { BrowserReferrerService } from '../../app/core/services/browser.referrer.service';
-// import { NgChartsModule } from 'ng2-charts';
+
 
 export const REQ_KEY = makeStateKey<string>('req');
 

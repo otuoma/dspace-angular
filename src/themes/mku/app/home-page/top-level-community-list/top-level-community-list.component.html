@@ -6,9 +6,10 @@
         <h2>Browse Communities</h2>
         <p class="lead">{{'home.top-level-communities.help' | translate}}</p>
         <ds-viewable-collection
-          [config]="config"
+          [config]="config" [hasBorder]="true"
           [sortConfig]="sortConfig"
           [objects]="communitiesRD$ | async"
+          [hidePaginationDetail]="true"
           [hideGear]="true">
         </ds-viewable-collection>
       </div>
@@ -16,12 +17,21 @@
       <ds-themed-loading *ngIf="communitiesRD?.isLoading " message="{{'loading.top-level-communities' | translate}}"></ds-themed-loading></ng-container>
 
   </div>
-  <div class="col-md-6">
-<!--    <ng-container *ngIf="haveCommunities">-->
-<!--      <h2 class="px-4 text-center">Knowledge Wheel</h2>-->
-<!--    </ng-container>-->
-<!--    <ng-container *ngIf="!haveCommunities">-->
-<!--      Loading Knowledge Wheel ...-->
-<!--    </ng-container>-->
+  <div class="col-md-6 text-center">
+    <ng-container *ngIf="haveCommunities">
+      <h2 class="px-4 text-center mb-4">Knowledge Wheel</h2>
+      <div class="text-center">
+        <canvas baseChart
+                [labels]="doughnutChartLabels"
+                [datasets]="doughnutChartDatasets"
+                [options]="doughnutChartOptions"
+                [legend]="false"
+                [type]="'doughnut'">
+        </canvas>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!haveCommunities">
+      Loading Knowledge Wheel ...
+    </ng-container>
   </div>
 </div>
