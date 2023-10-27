@@ -34,16 +34,15 @@ export class TopLevelCommunityListComponent extends BaseComponent implements OnI
         callbacks:{
           label(tooltipItem: TooltipItem<any>): string | string[] | void {
             return `Moderated for visibility`;
-          }
+          },
         }
       },
       datalabels: {
         formatter: (value, context) => {
-          console.log(this.rawData);
           return this.rawData[context.dataIndex];
         }
       }
-    }
+    },
   };
 
   constructor(

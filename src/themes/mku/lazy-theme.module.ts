@@ -127,10 +127,12 @@ import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-a
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import { NgChartsModule } from 'ng2-charts';
+import {FeaturedPublicationsComponent} from './app/home-page/featured-publications/featured-publications.component';
 
 const DECLARATIONS = [
   FileSectionComponent,
   HomePageComponent,
+  FeaturedPublicationsComponent,
   RootComponent,
   BrowseBySwitcherComponent,
   CommunityListPageComponent,
@@ -241,7 +243,8 @@ const DECLARATIONS = [
         DsoSharedModule,
         SystemWideAlertModule,
         NgxGalleryModule,
-        NgChartsModule
+        // Added by OTUOMA
+        NgChartsModule,
     ],
   declarations: DECLARATIONS,
   exports: [
