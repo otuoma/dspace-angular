@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminRegistriesModule } from '../../app/admin/admin-registries/admin-registries.module';
 import { AdminSearchModule } from '../../app/admin/admin-search-page/admin-search.module';
@@ -128,11 +128,14 @@ import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import { NgChartsModule } from 'ng2-charts';
 import {FeaturedPublicationsComponent} from './app/home-page/featured-publications/featured-publications.component';
+import {HyperlinkSwiperDirective} from './app/home-page/featured-publications/hyperlink-swiper.directive';
+import { register } from 'swiper/element/bundle';
+register();
 
 const DECLARATIONS = [
+  HyperlinkSwiperDirective,
   FileSectionComponent,
   HomePageComponent,
-  FeaturedPublicationsComponent,
   RootComponent,
   BrowseBySwitcherComponent,
   CommunityListPageComponent,
@@ -245,11 +248,14 @@ const DECLARATIONS = [
         NgxGalleryModule,
         // Added by OTUOMA
         NgChartsModule,
+      FeaturedPublicationsComponent
     ],
   declarations: DECLARATIONS,
   exports: [
-    CommunityPageSubCollectionListComponent
-  ]
+    CommunityPageSubCollectionListComponent,
+    HyperlinkSwiperDirective
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
   /**

@@ -32,7 +32,7 @@
 
   "error-page.description.404": "page not found",
 
-  "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with DSpace. If the error persists, contact the administrator",
+  "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with MKU E-Repository. If the error persists, contact the administrator",
 
   "access-status.embargo.listelement.badge": "Embargo",
 

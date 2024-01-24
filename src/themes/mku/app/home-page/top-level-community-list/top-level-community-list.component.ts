@@ -15,7 +15,7 @@ Chart.register(ChartDataLabels);
 
 export class TopLevelCommunityListComponent extends BaseComponent implements OnInit{
 
-  minVisibility = 10;
+  minVisibility = 5;
   rawData = [];
   haveCommunities = false;
   public communitiesList: Community[];

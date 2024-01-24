@@ -15,5 +15,8 @@
 
   "footer.link.dspace": "Mount Kenya University",
 
-  "home.top-level-communities.head": "Browse Communities"
+  "home.top-level-communities.head": "Browse Communities",
+
+  "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with MKU E-Repository. If the error persists, contact the administrator"
+
 }

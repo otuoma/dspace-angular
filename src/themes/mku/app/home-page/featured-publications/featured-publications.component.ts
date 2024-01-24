@@ -1,41 +1,66 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  ElementRef,
+  ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HyperlinkSwiperDirective} from './hyperlink-swiper.directive';
+import {SwiperOptions} from 'swiper/types';
+import {SwiperContainer} from 'swiper/element';
+
+interface Card {
+  title: string;
+  description: string;
+  url: string;
+}
 
 @Component({
-  selector: 'ds-featured-publications',
+  selector: 'ds-hyperlink-featured-publications',
   templateUrl: './featured-publications.component.html',
-  styleUrls: ['./featured-publications.component.scss']
+  styleUrls: ['./featured-publications.component.scss'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  standalone: true,
+  encapsulation: ViewEncapsulation.None,
+  imports: [CommonModule, HyperlinkSwiperDirective, LazyThemeModule, LazyThemeModule, LazyThemeModule]
 })
-export class FeaturedPublicationsComponent implements OnInit{
-  @ViewChild('swiperRef', { static: true })
-  protected _swiperRef: ElementRef;
-  srcPhotos: any[] = [];
-  ngOnInit(): void {
-    console.log(`===============`);
+export class FeaturedPublicationsComponent implements AfterViewInit{
+  @ViewChild('swiper') swiper!: ElementRef<SwiperContainer>;
+  @ViewChild('swiperThumbs') swiperThumbs!: ElementRef<SwiperContainer>;
+
+  contents: Card[] = [
+    {
+      title: 'Computer',
+      description: 'Description about computer...',
+      url: 'https://picsum.photos/id/1/640/480',
+    },
+    {
+      title: 'Building',
+      description: 'Building description...',
+      url: 'https://picsum.photos/id/101/640/480',
+    }];
+
+  index = 0;
+  // Swiper
+  swiperConfig: SwiperOptions = {
+    spaceBetween: 10,
+    navigation: true,
+  };
+  swiperThumbsConfig: SwiperOptions = {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  };
+
+  ngAfterViewInit() {
+    this.swiper.nativeElement.swiper.activeIndex = this.index;
+    this.swiperThumbs.nativeElement.swiper.activeIndex = this.index;
   }
 
-  initSwiper() {
-    const swiperEl: any = document.querySelector('swiper-container');
-
-    const swiperParams = {
-      slidesPerView: 1,
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-      on: {
-        init() {
-          console.log(`=============`);
-        },
-      },
-    };
-    // now we need to assign all parameters to Swiper element
-    Object.assign(swiperEl, swiperParams);
-
-    // and now initialize it
-    swiperEl.initialize();
+  slideChange(swiper: any) {
+    this.index = swiper.detail[0].activeIndex;
   }
 }
