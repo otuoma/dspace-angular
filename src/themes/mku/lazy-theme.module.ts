@@ -127,8 +127,6 @@ import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-a
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import { NgChartsModule } from 'ng2-charts';
-import { register } from 'swiper/element/bundle';
-register();
 
 const DECLARATIONS = [
   FileSectionComponent,
