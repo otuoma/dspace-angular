@@ -31,7 +31,6 @@ import { models } from './core/core.module';
 import { ThemeService } from './shared/theme-support/theme.service';
 import { IdleModalComponent } from './shared/idle-modal/idle-modal.component';
 import { distinctNext } from './core/shared/distinct-next';
-import {register} from 'swiper/element/bundle';
 
 @Component({
   selector: 'ds-app',
@@ -88,7 +87,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.isThemeLoading$ = this.themeService.isThemeLoading$;
 
     this.storeCSSVariables();
-    register();
   }
 
   ngOnInit() {
