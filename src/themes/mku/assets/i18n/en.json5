@@ -17,6 +17,12 @@
 
   "home.top-level-communities.head": "Browse Communities",
 
-  "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with MKU E-Repository. If the error persists, contact the administrator"
+  "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with MKU E-Repository. If the error persists, contact the administrator",
+
+  "search.form.scope.all": "All of Repository",
+
+  "nav.browse.header": "All of Repository",
+
+  "dso-selector.set-scope.community.button": "Search all Everywhere"
 
 }
