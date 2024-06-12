@@ -13,7 +13,9 @@
         <div id="collapsingNav">
           <ul class="navbar-nav navbar-navigation">
             <li class="nav-item nav-link">
-              <a routerLink="/communities/fb7920b9-e417-4ec9-94e2-bc72a7a64513">Scholars</a></li>
+              <a routerLink="/communities/fb7920b9-e417-4ec9-94e2-bc72a7a64513" class="">
+                 Scholar Profiles <i class="fas fa-graduation-cap fa-lg fa-fw"></i> </a>
+            </li>
             <li *ngIf="(isXsOrSm$ | async) && (isAuthenticated$ | async)">
               <ds-user-menu [inExpandableNavbar]="true"></ds-user-menu>
             </li>
