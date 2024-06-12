@@ -10,6 +10,7 @@
   --mku-light-blue: #0066CC;
   --mku-orange: #dd9933;
   --ds-header-icon-color: var(--mku-blue);
+  --thumbnail-box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 1px 0 15px -4px rgba(31, 73, 125, 0.8), -1px 0 15px -4px rgba(31, 73, 125, 0.8);
 }
 .btn-primary.disabled, .btn-primary:disabled, .btn-primary {
   background-color: var(--mku-orange);
@@ -132,5 +133,30 @@ ds-community-list-element{
   color: var(--mku-blue);
   font-size: 15pt;
   font-weight: bold;
+}
+
+.home-recent .row .col-3 .thumbnail {
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--thumbnail-box-shadow);
+}
+#p-spc .thumbnail, #p-cp .thumbnail{
+  box-shadow: var(--thumbnail-box-shadow);
+}
+.ngx-gallery-layout .ngx-gallery-image-wrapper{
+  box-shadow: var(--thumbnail-box-shadow) !important;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+ngx-gallery-image .ngx-gallery-image {
+  background-position: center !important;
+
+}
+.simple-view-element{
+  margin-top: 40px;
+}
+li a.scholar-profiles{
+  border: solid 1.5px var(--mku-orange);
+  padding: 5px;
 }
 
