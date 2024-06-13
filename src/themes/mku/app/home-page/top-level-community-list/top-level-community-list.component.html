@@ -3,7 +3,7 @@
     <ng-container *ngVar="(communitiesRD$ | async) as communitiesRD">
 
       <div *ngIf="communitiesRD?.hasSucceeded" id="top-level-communities">
-        <h5 class="font-weight-bold">Browse Content Types</h5>
+        <h5 class="font-weight-bold">Browse Content Collections</h5>
         <p class="lead">{{'home.top-level-communities.help' | translate}}</p>
         <ds-viewable-collection
           [config]="config" [hasBorder]="true"

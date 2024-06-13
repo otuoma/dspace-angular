@@ -170,3 +170,33 @@ ds-home-news ds-search-form form .input-group input{
   border: none !important;
   box-shadow: none;
 }
+.simple-view-element ds-thumbnail .limit-width{
+  max-width: none !important;
+}
+.home-recent{
+  border-top: var(--mku-blue) 3px solid;
+  margin-top: 15px;
+}
+
+ds-recent-item-list h5 {
+  margin-bottom: 15px;
+  display: inline-block; /* Changed to inline-block to properly position the pseudo-element */
+  color: white;
+  background: var(--mku-blue);
+  padding: 10px;
+  margin-top: 0;
+  position: relative; /* To position the pseudo-element relative to the h5 element */
+}
+
+ds-recent-item-list h5::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10px; /* Adjust as needed to match the padding */
+  bottom: 0;
+  width: 20px; /* Adjust as needed for desired slant */
+  background: var(--mku-blue); /* Same color as the background */
+  transform: skewX(-45deg); /* Skew to create the slant */
+  transform-origin: top right; /* Origin point for the skew */
+  z-index: -1; /* Ensure it stays behind the text */
+}
