@@ -1470,11 +1470,7 @@
 
   "dso-selector.set-scope.community.head": "Select a search scope",
 
-<<<<<<< HEAD
-  "dso-selector.set-scope.community.button": "Search all Everywhere",
-=======
   "dso-selector.set-scope.community.button": "Search Everywhere",
->>>>>>> pucmm
 
   "dso-selector.set-scope.community.or-divider": "or",
 

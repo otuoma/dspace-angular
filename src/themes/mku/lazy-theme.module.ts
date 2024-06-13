@@ -126,7 +126,7 @@ import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
 import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
-import { NgChartsModule } from 'ng2-charts';
+// import { NgChartsModule } from 'ng2-charts';
 
 const DECLARATIONS = [
   FileSectionComponent,
@@ -241,8 +241,6 @@ const DECLARATIONS = [
         DsoSharedModule,
         SystemWideAlertModule,
         NgxGalleryModule,
-        // Added by OTUOMA
-        NgChartsModule,
     ],
   declarations: DECLARATIONS,
   exports: [

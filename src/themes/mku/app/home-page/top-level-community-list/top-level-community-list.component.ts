@@ -4,10 +4,9 @@ import { APP_CONFIG, AppConfig } from '../../../../../config/app-config.interfac
 import { CommunityDataService } from '../../../../../app/core/data/community-data.service';
 import { PaginationService } from '../../../../../app/core/pagination/pagination.service';
 import { Community } from '../../../../../app/core/shared/community.model';
-import { ChartConfiguration, Chart, TooltipItem } from 'chart.js';
-import ChartDataLabels from 'chartjs-plugin-datalabels';
-
-Chart.register(ChartDataLabels);
+import * as Highcharts from 'highcharts';
+import {SeriesOptionsType} from 'highcharts';
+import {MkuDataSharingServiceService} from '../../mku-data-sharing-service.service';
 
 @Component({
   selector: 'ds-top-level-community-list',
@@ -15,116 +14,110 @@ Chart.register(ChartDataLabels);
 })
 export class TopLevelCommunityListComponent extends BaseComponent implements OnInit {
 
-  minVisibility = 5;
-  rawData = [];
+  communitiesList: Community[];
+  data: {name: string, y: number, communityUrl: string}[] = [];
+  isHighcharts = typeof Highcharts === 'object';
+  Highcharts: typeof Highcharts = Highcharts;
+  updateFlag = false;
   haveCommunities = false;
-  public communitiesList: Community[];
-  public doughnutChartLabels: string[] = [];
-  public doughnutChartDatasets: ChartConfiguration<'doughnut'>['data']['datasets'] = [
-    { data: this.rawData },
-  ];
-
-  public doughnutChartOptions: ChartConfiguration<'doughnut'>['options'] = {
-    responsive: true,
-    maintainAspectRatio: false,
-    cutout: '50%',
-    plugins: {
-      tooltip: {
-        enabled: true,
-        callbacks: {
-          label(tooltipItem: TooltipItem<any>): string | string[] | void {
-            return `Moderated for visibility`;
-          },
-        }
-      },
+  series: SeriesOptionsType = {
+    type: 'pie',
+    name: '', startAngle: 30,
+    innerSize: '50%',
+    data: [],
+    dataLabels: {
+      enabled: true,
+      alignTo: 'connectors',
+      connectorShape: 'crookedLine',
     }
+  };
+
+  chartOptions: Highcharts.Options = {
+    chart: {
+      plotBackgroundColor: '#eee',
+      plotBorderWidth: 0,
+      plotShadow: false,
+      type: 'pie',
+      borderWidth: 0
+    },
+    title : {
+      text: ''
+    },
+    tooltip: {
+      // pointFormat: '<b>{point.percentage:.1f}%</b> of all repository items'
+      pointFormat: 'Moderated for visibility'
+    },
+    plotOptions : {
+      pie: {
+        size: '50%',
+        allowPointSelect: true,
+        cursor: 'pointer',
+      }
+    },
+    series : [this.series],
+
+  };
+  chartCallback: Highcharts.ChartCallbackFunction = function (){
+    console.log();
   };
 
   constructor(
     @Inject(APP_CONFIG) appConfig: AppConfig,
     cds: CommunityDataService,
-    paginationService: PaginationService
+    paginationService: PaginationService,
+    private mdss: MkuDataSharingServiceService
   ) {
     super(appConfig, cds, paginationService);
   }
 
   ngOnInit() {
     super.ngOnInit();
-    this.communitiesRD$.subscribe((dataFetched) => {
-      if (dataFetched.hasSucceeded) {
+    this.communitiesRD$.subscribe(( (dataFetched) =>{
+
+      if ( dataFetched.hasSucceeded ){
         this.communitiesList = dataFetched.payload.page;
-        this.communitiesList.forEach((community: Community, index) => {
+        let newData: any[] = [];
+        this.communitiesList.forEach((community: Community, index)=>{
           let itemsCount = Number(community.archivedItemsCount);
           let communityUrl = community.metadata['dc.identifier.uri'][0].value;
-          let name = community.metadata['dc.title'][0].value;
-          this.doughnutChartLabels.push(name);
-          this.rawData.push(itemsCount);
+          let communityName = community.metadata['dc.title'][0].value;
+          newData.push(
+            {name: communityName, y: itemsCount, communityUrl: communityUrl}
+          );
         });
-        let total = this.rawData.reduce((a, v) => Number(a) + Number(v));
-
-        this.doughnutChartDatasets[0].data = this.rawData.map(
-          v => Math.max(v / total * 100, this.minVisibility)
-        );
-        this.haveCommunities = true;
-      }
-    });
-  }
-
-  ngAfterViewInit() {
-    // Custom plugin for drawing lines
-    Chart.register({
-      id: 'drawLines',
-      afterDraw: (chart) => {
-        const ctx = chart.ctx;
-        chart.data.datasets.forEach((dataset, i) => {
-          const meta = chart.getDatasetMeta(i);
-          if (!meta.hidden) {
-            meta.data.forEach((element, index) => {
-              const model = element.getProps(['_model']) as any;
-              const arc = element.getProps(['arc']) as any;
-              const startAngle = arc.startAngle;
-              const endAngle = arc.endAngle;
-              const midAngle = (startAngle + endAngle) / 2;
-              const radius = model.outerRadius;
-              const x = model.x + radius * Math.cos(midAngle);
-              const y = model.y + radius * Math.sin(midAngle);
-              const padding = 10; // Ensure labels are at least 10px away from the pie element
-
-              const labelX = x + (x > model.x ? padding : -padding);
-              const labelY = y + (y > model.y ? padding : -padding);
-
-              ctx.beginPath();
-              ctx.moveTo(x, y);
-              ctx.lineTo(labelX, labelY);
-              ctx.strokeStyle = 'rgba(0, 0, 0, 0.7)';
-              ctx.stroke();
-
-              const text = chart.data.labels[index];
-              const fontSize = 12;
-              const fontStyle = 'bold';
-              const fontFamily = 'Helvetica Neue';
-
-              // Use canvas context directly to set font properties
-              ctx.font = `${fontStyle} ${fontSize}px ${fontFamily}`;
-              ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
-
-              // Determine text baseline
-              const textBaseline = y > model.y ? 'top' : 'bottom';
-
-              // Determine text align
-              const textAlign = x > model.x ? 'start' : 'end';
-
-              // Calculate width of the text
-              const textWidth = ctx.measureText(text.toString()).width;
-
-              // Draw text
-              ctx.textBaseline = textBaseline;
-              ctx.textAlign = textAlign;
-              ctx.fillText(text.toString(), labelX + (x > model.x ? 1 : -1) * (padding + (x > model.x ? 0 : textWidth)), labelY);
+        const total = newData.reduce((acc: number, point) => Number(acc) + point.y, 0);
+        const thresholdAngle = 0.05 * 360; // 5% of 360 degrees
+        newData.forEach(point => {
+          const angle = (point.y / total) * 360;
+          if (angle < thresholdAngle) {
+            const newAngle = thresholdAngle;
+            const newValue = Math.round((newAngle / 360) * total);
+            const adjustment = newValue - point.y;
+            // Adjust all other values proportionally
+            const totalAdjusted = Number(total) + adjustment;
+            const adjustmentRatio = total / totalAdjusted;
+            newData.forEach(p => {
+              if (p !== point) {
+                p.y *= adjustmentRatio;
+              }
             });
+            point.y = newValue;
           }
         });
+        // Round off y values to whole numbers
+        newData.forEach(point => {
+          point.y = Math.round(point.y);
+          // console.log(point.y);
+        });
+        if ('data' in this.chartOptions.series[0]) {
+          let sortedData = newData.sort((a, b) => a.name.localeCompare(b.name));
+          this.chartOptions.series[0].data = [...sortedData];
+          // console.log(this.chartOptions.series[0].data);
+          this.updateFlag = true;
+        }
+        this.haveCommunities = true;
       }
-    });
+    }));
   }
+
 }

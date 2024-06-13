@@ -51,7 +51,7 @@ import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.compon
 import {
   TopLevelCommunityListComponent
 } from './app/home-page/top-level-community-list/top-level-community-list.component';
-import {NgChartsModule} from "ng2-charts";
+import {HighchartsChartModule} from 'highcharts-angular';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -100,7 +100,7 @@ const DECLARATIONS = [
         ItemSharedModule,
         DsoPageModule,
         NgxGalleryModule,
-        NgChartsModule
+        HighchartsChartModule
     ],
   declarations: DECLARATIONS,
   providers: [

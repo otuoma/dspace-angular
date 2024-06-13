@@ -159,4 +159,14 @@ li a.scholar-profiles{
   border: solid 1.5px var(--mku-orange);
   padding: 5px;
 }
+.highcharts-credits{display: none;}
 
+ds-search-form form .input-group{
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 5px;
+}
+ds-search-form form .input-group input{
+  border: none !important;
+  box-shadow: none;
+}
