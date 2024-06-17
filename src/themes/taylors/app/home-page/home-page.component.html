@@ -1,0 +1,67 @@
+<ds-themed-home-news></ds-themed-home-news>
+<div class="container">
+  <ng-container *ngIf="(site$ | async) as site">
+    <ds-view-tracker [object]="site"></ds-view-tracker>
+  </ng-container>
+  <div class="row">
+    <div class="col-3 home-left-sidebar">
+      <div class="bg-light">
+        <nav class="nav flex-column">
+          <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          <a class="nav-link" href="#">Browse <span class="fas fa-bars fa-fw" aria-hidden="true"></span></a>
+          <div class="pl-2 ">
+            <a class="nav-link" routerLink="">By Title</a>
+            <a class="nav-link" routerLink="/browse/dateissued">By Date Issued</a>
+            <a class="nav-link" routerLink="/browse/author">By Author</a>
+            <a class="nav-link" routerLink="/browse/subject">By Subject</a>
+            <a class="nav-link" routerLink="/community-list">By Resource Type</a>
+          </div>
+          <a class="nav-link" routerLink="/statistics">Statistics</a>
+          <a class="nav-link disabled">Library Website</a>
+          <a class="nav-link disabled">Help</a>
+        </nav>
+      </div>
+    </div>
+    <div class="col-9">
+      <h3>Welcome to Taylor's e-Repository</h3>
+      <p>
+        Taylor's e-Repository is a service of the Taylor's Libraries to collect, manage, preserve and make accessible
+        the intellectual output of the Taylor's University Research Faculty, staff and students which are scholarly
+        and Taylor's heritage in nature in a variety of digital formats.
+      </p>
+      <p>
+        The intellectual output include:
+      </p>
+      <div class="row">
+        <div class="col-6">
+          <ul>
+            <li>Article (Journal,Newspaper)</li>
+            <li>Artwork</li>
+            <li>Annual Publication</li>
+            <li>Awards & Recognition (Accolades)</li>
+            <li>Data Set</li>
+            <li>Drawing</li>
+            <li>Newsletter</li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>Academic Profiles</li>
+            <li>Research Abstracts</li>
+            <li>Dissertations & Thesis</li>
+            <li>Photograph</li>
+            <li>Multimedia</li>
+            <li>Book Chapter</li>
+            <li>Sculptures/Creative Work</li>
+            <li>Patent</li>
+          </ul>
+        </div>
+      </div>
+      <ds-themed-search-form [inPlaceSearch]="false" [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-themed-search-form>
+      <ds-themed-top-level-community-list></ds-themed-top-level-community-list>
+      <ds-recent-item-list *ngIf="recentSubmissionspageSize>0"></ds-recent-item-list>
+    </div>
+
+  </div>
+
+</div>
