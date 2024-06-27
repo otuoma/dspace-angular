@@ -126,9 +126,11 @@ import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
 import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
+import {PersonComponent} from './app/entity-groups/research-entities/item-pages/person/person.component';
 // import { NgChartsModule } from 'ng2-charts';
 
 const DECLARATIONS = [
+  PersonComponent,
   FileSectionComponent,
   HomePageComponent,
   RootComponent,
