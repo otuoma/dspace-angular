@@ -51,20 +51,18 @@ export class PublicationComponent extends BaseComponent implements OnInit{
           this.retrievedMonths = repo.points.map(item => item.label);
           this.dataList = repo.points.map(item => item.values['views']);
           this.setChartOptions();
+        }  else if (repo.reportType === 'TotalDownloads') {
+          this.totalDownloads = repo.points.reduce(
+            (sum, item) => sum + Number(item.values['views']), 0);
+        } else if (repo.reportType === 'TotalVisits') {
+          this.totalViews = repo.points.reduce(
+            (sum, item) => sum + Number(item.values['views']), 0);
         } else if (repo.reportType === 'TopCountries') {
           console.log('TopCountries');
           console.log(repo);
         } else if (repo.reportType === 'TopCities') {
           console.log('TopCities');
           console.log(repo);
-        } else if (repo.reportType === 'TotalDownloads') {
-          console.log('TotalDownloads');
-          console.log(repo);
-          this.totalDownloads = repo.points.reduce(
-            (sum, item) => sum + Number(item.values['views']), 0);
-        } else if (repo.reportType === 'TotalVisits') {
-          this.totalViews = repo.points.reduce(
-            (sum, item) => sum + Number(item.values['views']), 0);
         } else {
           console.log(repo);
         }
