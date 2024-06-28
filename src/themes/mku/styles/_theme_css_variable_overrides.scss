@@ -173,12 +173,12 @@ ds-home-news ds-search-form form .input-group input{
 .simple-view-element ds-thumbnail .limit-width{
   max-width: none !important;
 }
-.home-recent{
+.home-recent, .person-bio{
   border-top: var(--mku-blue) 3px solid;
   margin-top: 15px;
 }
 
-ds-recent-item-list h5 {
+ds-recent-item-list h5, .person-bio h5 {
   margin-bottom: 15px;
   display: inline-block; /* Changed to inline-block to properly position the pseudo-element */
   color: white;
@@ -188,7 +188,7 @@ ds-recent-item-list h5 {
   position: relative; /* To position the pseudo-element relative to the h5 element */
 }
 
-ds-recent-item-list h5::after {
+ds-recent-item-list h5::after,  .person-bio h5::after {
   content: '';
   position: absolute;
   top: 0;
@@ -199,4 +199,12 @@ ds-recent-item-list h5::after {
   transform: skewX(-45deg); /* Skew to create the slant */
   transform-origin: top right; /* Origin point for the skew */
   z-index: -1; /* Ensure it stays behind the text */
+}
+.simple-view-element {
+  margin-top: 5px;
+}
+#search-page-sidebar-content{
+  background: #ddd;
+  margin-top: 2px;
+  border-radius: 3px;
 }
