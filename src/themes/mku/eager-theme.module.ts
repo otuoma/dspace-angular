@@ -52,6 +52,8 @@ import {
   TopLevelCommunityListComponent
 } from './app/home-page/top-level-community-list/top-level-community-list.component';
 import {HighchartsChartModule} from 'highcharts-angular';
+import {UsageReportDataService} from '../../app/core/statistics/usage-report-data.service';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -100,11 +102,11 @@ const DECLARATIONS = [
         ItemSharedModule,
         DsoPageModule,
         NgxGalleryModule,
-        HighchartsChartModule
+        HighchartsChartModule, NgbModule
     ],
   declarations: DECLARATIONS,
   providers: [
-    ...ENTRY_COMPONENTS.map((component) => ({provide: component}))
+    ...ENTRY_COMPONENTS.map((component) => ({provide: component})), UsageReportDataService
   ],
 })
 /**
