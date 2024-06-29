@@ -90,10 +90,10 @@
                                 [separator]="', '"
                                 [label]="'item.page.subject'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
-                                [fields]="['dc.identifier.citation']"
-                                [label]="'item.page.citation'">
-    </ds-generic-item-page-field>
+<!--    <ds-generic-item-page-field [item]="object"-->
+<!--                                [fields]="['dc.identifier.citation']"-->
+<!--                                [label]="'item.page.citation'">-->
+<!--    </ds-generic-item-page-field>-->
     <ds-item-page-uri-field [item]="object"
                             [fields]="['dc.identifier.uri']"
                             [label]="'item.page.uri'">
@@ -103,6 +103,31 @@
       <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
         <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
       </a>
+    </div>
+    <div class="container mt-4" *ngIf="reportsLoaded">
+      <h5 class="simple-view-element-header">Cite this Item</h5>
+      <ul ngbNav #nav="ngbNav" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>APA</a>
+          <ng-template ngbNavContent>
+            <div [innerHTML]="apaCitation"></div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Vancouver</a>
+          <ng-template ngbNavContent>
+            <div [innerHTML]="vancouverCitation"></div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>BibTex</a>
+          <ng-template ngbNavContent>
+<!--            <div [innerHTML]="mlaCitation"></div>-->
+          </ng-template>
+        </li>
+
+      </ul>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
     </div>
     <div class="container mt-4" *ngIf="reportsLoaded">
       <h5 class="simple-view-element-header">Usage at a Glance</h5>

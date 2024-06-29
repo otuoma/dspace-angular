@@ -8,6 +8,8 @@ import {Router} from '@angular/router';
 import {UsageReportDataService} from '../../../../../../../app/core/statistics/usage-report-data.service';
 import {UsageReport} from '../../../../../../../app/core/statistics/models/usage-report.model';
 import * as Highcharts from 'highcharts';
+import { Cite } from '@citation-js/core';
+import '@citation-js/plugin-csl';
 
 /**
  * Component that represents a publication Item page
@@ -30,6 +32,10 @@ export class PublicationComponent extends BaseComponent implements OnInit{
   totalViews: number;
   totalDownloads: number;
 
+  apaCitation: string;
+  vancouverCitation: string;
+  bibTex: string;
+
   constructor(
     protected routeService: RouteService,
     protected router: Router,
@@ -42,6 +48,7 @@ export class PublicationComponent extends BaseComponent implements OnInit{
     super.ngOnInit();
     let report = this.usageReportDataService
       .searchStatistics(this.object._links.self.href, 0, 20);
+    this.generateCitations();
 
     report.subscribe((uReport: UsageReport[]) => {
       this.usageReport = uReport;
@@ -91,6 +98,41 @@ export class PublicationComponent extends BaseComponent implements OnInit{
         }
       ]
     };
+  }
+  generateCitations(){
+    let dateIssued = this.object.firstMetadataValue(['dc.date.issued']);
+    const cite = new Cite({
+      type: 'article-journal',
+      title: this.object.firstMetadataValue(['dc.title']),
+      author: this.object.allMetadataValues(['dc.contributor.author']),
+      issued: {
+        'date-parts': [this.extractDateParts(dateIssued)]
+      },
+      publisher: this.object.firstMetadataValue(['dc.publisher']),
+      URL: this.object.firstMetadataValue(['dc.identifier.uri'])
+    });
+
+    this.apaCitation = cite.format('bibliography', {
+      format: 'html',
+      template: 'apa',
+      lang: 'en-US'
+    });
+    this.vancouverCitation = cite.format('bibliography', {
+      format: 'html',
+      template: 'vancouver',
+      lang: 'en-US'
+    });
+  }
+
+  extractDateParts(dateStr: string): number[] {
+    const parts = dateStr.split('-').map(part => parseInt(part, 10));
+
+    // Ensure parts array has at least 3 elements (for year, month, date)
+    // while (parts.length < 3) {
+    //   parts.push(undefined);
+    // }
+
+    return parts;
   }
 
 
