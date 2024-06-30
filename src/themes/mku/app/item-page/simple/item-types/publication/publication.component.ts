@@ -108,6 +108,7 @@ export class PublicationComponent extends BaseComponent implements OnInit{
       issued: {
         'date-parts': [this.extractDateParts(dateIssued)]
       },
+      journal: this.object.firstMetadataValue(['dc.publisher']),
       publisher: this.object.firstMetadataValue(['dc.publisher']),
       URL: this.object.firstMetadataValue(['dc.identifier.uri'])
     });
