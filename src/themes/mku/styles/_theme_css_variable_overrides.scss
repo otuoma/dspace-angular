@@ -203,8 +203,26 @@ ds-recent-item-list h5::after,  .person-bio h5::after {
 .simple-view-element {
   margin-top: 5px;
 }
+ds-item-page-abstract-field .preserve-line-breaks {
+  white-space: unset !important;
+  text-align: justify;
+}
 #search-page-sidebar-content{
   background: #ddd;
   margin-top: 2px;
   border-radius: 3px;
 }
+a, li.breadcrumb-item a {
+  color: var(--mku-blue) !important;
+}
+.top-footer a {
+  color: white !important;
+}
+.navbar-nav .nav-link a {
+  color: var(--mku-orange) !important;
+}
+h2.item-page-title-field{
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+

@@ -79,7 +79,40 @@
       [relationType]="'isJournalIssueOfPublication'"
       [label]="'relationships.isJournalIssueOf' | translate">
     </ds-related-items>
+
+    <div class="mb-4 mx-0" *ngIf="pageLoaded">
+      <h5 class="simple-view-element-header">{{ "item.page.citeThisItem" | translate}}</h5>
+      <ul ngbNav #nav="ngbNav" class="nav-tabs border-light">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>APA</a>
+          <ng-template ngbNavContent>
+            <div [innerHTML]="apaCitation"></div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>MLA</a>
+          <ng-template ngbNavContent>
+            <div [innerHTML]="mlaCitation"></div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Harvard</a>
+          <ng-template ngbNavContent>
+            <div [innerHTML]="harvardCitation"></div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="4">
+          <a ngbNavLink>Vancouver</a>
+          <ng-template ngbNavContent>
+            <div [innerHTML]="vancouverCitation"></div>
+          </ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
+
     <ds-generic-item-page-field [item]="object"
                                 [fields]="['dc.description']"
                                 [label]="'publication.page.description'">
@@ -99,30 +132,8 @@
                             [label]="'item.page.uri'">
     </ds-item-page-uri-field>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
-    <div>
-      <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
-        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
-      </a>
-    </div>
-    <div class="container mt-4" *ngIf="reportsLoaded">
-      <h5 class="simple-view-element-header">Cite this Item</h5>
-      <ul ngbNav #nav="ngbNav" class="nav-tabs border-light">
-        <li [ngbNavItem]="1">
-          <a ngbNavLink>APA</a>
-          <ng-template ngbNavContent>
-            <div [innerHTML]="apaCitation"></div>
-          </ng-template>
-        </li>
-        <li [ngbNavItem]="2">
-          <a ngbNavLink>Vancouver</a>
-          <ng-template ngbNavContent>
-            <div [innerHTML]="vancouverCitation"></div>
-          </ng-template>
-        </li>
-      </ul>
-      <div [ngbNavOutlet]="nav" class="mt-2"></div>
-    </div>
-    <div class="container mt-4" *ngIf="reportsLoaded">
+
+    <div class="mt-4" *ngIf="reportsLoaded">
       <h5 class="simple-view-element-header">Usage at a Glance</h5>
       <ul ngbNav #nav="ngbNav" class="nav-tabs">
         <li [ngbNavItem]="1">
@@ -149,6 +160,11 @@
         </li>
       </ul>
       <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+    <div>
+      <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
+        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
+      </a>
     </div>
   </div>
 </div>
