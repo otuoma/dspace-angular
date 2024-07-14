@@ -225,4 +225,9 @@ h2.item-page-title-field{
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
-
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: var(--mku-orange);
+  border-color: var(--mku-orange);
+}
