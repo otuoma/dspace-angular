@@ -8,7 +8,7 @@
     </ds-mirador-viewer>
   </div>
 </div>
-<div class="d-flex flex-row">
+<div class="d-flex flex-row mb-4">
   <ds-themed-item-page-title-field [item]="object" class="mr-auto">
   </ds-themed-item-page-title-field>
   <ds-dso-edit-menu></ds-dso-edit-menu>
@@ -62,6 +62,22 @@
                                 [fields]="['dc.publisher']"
                                 [label]="'publication.page.publisher'">
     </ds-generic-item-page-field>
+
+    <div ngbDropdown class="d-inline-block mb-4" *ngIf="citationsLoaded">
+      <button class="btn "  id="biblioDropdownMenuButton" ngbDropdownToggle>
+        Bibliographic Managers
+      </button>
+      <div ngbDropdownMenu aria-labelledby="biblioDropdownMenuButton">
+        <button class="dropdown-item" (click)="downloadCitation('endnote')">Endnote (RIS)</button>
+        <button class="dropdown-item" (click)="downloadCitation('bibtex')">Latex (BibTeX)</button>
+      </div>
+    </div>
+
+    <div>
+      <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
+        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
+      </a>
+    </div>
   </div>
   <div class="col-xs-12 col-md-7">
     <ds-related-items
@@ -80,9 +96,9 @@
       [label]="'relationships.isJournalIssueOf' | translate">
     </ds-related-items>
 
-    <div class="mb-4 mx-0" *ngIf="pageLoaded">
+    <div class="mb-4 mx-0" *ngIf="citationsLoaded">
       <h5 class="simple-view-element-header">{{ "item.page.citeThisItem" | translate}}</h5>
-      <ul ngbNav #nav="ngbNav" class="nav-tabs border-light">
+      <ul ngbNav #nav="ngbNav" class="nav-tabs border-light" id="citationTabLinks">
         <li [ngbNavItem]="1">
           <a ngbNavLink>APA</a>
           <ng-template ngbNavContent>
@@ -108,7 +124,7 @@
           </ng-template>
         </li>
       </ul>
-      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+      <div [ngbNavOutlet]="nav" class="bg-light p-3 border-top-0"></div>
     </div>
 
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
@@ -123,10 +139,6 @@
                                 [separator]="', '"
                                 [label]="'item.page.subject'">
     </ds-generic-item-page-field>
-<!--    <ds-generic-item-page-field [item]="object"-->
-<!--                                [fields]="['dc.identifier.citation']"-->
-<!--                                [label]="'item.page.citation'">-->
-<!--    </ds-generic-item-page-field>-->
     <ds-item-page-uri-field [item]="object"
                             [fields]="['dc.identifier.uri']"
                             [label]="'item.page.uri'">
@@ -134,7 +146,7 @@
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
 
     <div class="mt-4" *ngIf="reportsLoaded">
-      <h5 class="simple-view-element-header">Usage at a Glance</h5>
+      <h5 class="simple-view-element-header">Usage Statistics</h5>
       <ul ngbNav #nav="ngbNav" class="nav-tabs">
         <li [ngbNavItem]="1">
           <a ngbNavLink>Visits per Month</a>
@@ -149,22 +161,59 @@
         <li [ngbNavItem]="2">
           <a ngbNavLink>Top Countries</a>
           <ng-template ngbNavContent>
-            <div class="d-none">Top Countries</div>
+            <div id="countriesMapContainer" style="width: 100%;">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead class="bg-light">
+                  <th>SN</th><th>Country</th><th>Views</th>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let country of countriesTableData; ">
+                    <td>{{ country['indexNum'] }}</td>
+                    <td>{{ country['countryLabel'] }}</td>
+                    <td>{{ country['value'] }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+            <highcharts-chart
+              [Highcharts]="Highcharts"
+              [constructorType]="'mapChart'"
+              [options]="countriesMapChartOptions"
+              style="width: 100%; height: 400px; display: block;"
+            ></highcharts-chart>
           </ng-template>
         </li>
         <li [ngbNavItem]="3">
           <a ngbNavLink>Top Cities</a>
           <ng-template ngbNavContent>
-            <div class="d-none">Top cities</div>
+            <div id="citiesMapContainer" style="width: 100%;">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead class="bg-light">
+                  <th>SN</th><th>City</th><th>Views</th>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let city of citiesTableData; ">
+                    <td>{{ city['indexNum'] }}</td>
+                    <td>{{ city['cityLabel'] }}</td>
+                    <td>{{ city['value'] }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div><!-- .table-responsive -->
+            </div>
+            <highcharts-chart
+              [Highcharts]="Highcharts"
+              [options]="citiesBargraphOptions"
+              style="width: 100%; height: 400px; display: block;">
+            </highcharts-chart>
           </ng-template>
         </li>
       </ul>
       <div [ngbNavOutlet]="nav" class="mt-2"></div>
-    </div>
-    <div>
-      <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
-        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
-      </a>
     </div>
   </div>
 </div>

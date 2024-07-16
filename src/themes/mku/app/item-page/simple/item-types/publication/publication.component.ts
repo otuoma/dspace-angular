@@ -7,9 +7,20 @@ import {RouteService} from '../../../../../../../app/core/services/route.service
 import {Router} from '@angular/router';
 import {UsageReportDataService} from '../../../../../../../app/core/statistics/usage-report-data.service';
 import {UsageReport} from '../../../../../../../app/core/statistics/models/usage-report.model';
+
 import * as Highcharts from 'highcharts';
+import MapModule from 'highcharts/modules/map';
+import ExportingModule from 'highcharts/modules/exporting';
+import worldMap from '@highcharts/map-collection/custom/world.geo.json';
+
 import {Cite, plugins} from '@citation-js/core';
 import '@citation-js/plugin-csl';
+import '@citation-js/plugin-bibtex';
+import '@citation-js/plugin-ris';
+
+// Initialize the modules
+MapModule(Highcharts);
+ExportingModule(Highcharts);
 
 /**
  * Component that represents a publication Item page
@@ -24,10 +35,12 @@ import '@citation-js/plugin-csl';
 })
 export class PublicationComponent extends BaseComponent implements OnInit{
   Highcharts: typeof Highcharts = Highcharts;
+  chartOptions: Highcharts.Options = {};
+  countriesMapChartOptions: Highcharts.Options = {};
+  citiesBargraphOptions: Highcharts.Options = {};
   usageReport: UsageReport[] | null;
   retrievedMonths: string[] = [];
   dataList: any[] = [];
-  chartOptions: Highcharts.Options = {};
   reportsLoaded = false;
   totalViews: number;
   totalDownloads: number;
@@ -36,7 +49,16 @@ export class PublicationComponent extends BaseComponent implements OnInit{
   apaCitation: string;
   harvardCitation: string;
   mlaCitation = 'mla';
-  pageLoaded = false;
+  bibtexCitation: string;
+  endNoteCitation: string;
+
+  citationsLoaded = false;
+
+  countriesMapData = [];
+  countriesTableData = [];
+  citiesTableData = [];
+  cityNames = [];
+  cityViews = [];
 
   constructor(
     protected routeService: RouteService,
@@ -54,7 +76,6 @@ export class PublicationComponent extends BaseComponent implements OnInit{
 
     report.subscribe((uReport: UsageReport[]) => {
       this.usageReport = uReport;
-      this.reportsLoaded = true;
       uReport.forEach( repo => {
         if (repo.reportType === 'TotalVisitsPerMonth') {
           this.retrievedMonths = repo.points.map(item => item.label);
@@ -67,15 +88,34 @@ export class PublicationComponent extends BaseComponent implements OnInit{
           this.totalViews = repo.points.reduce(
             (sum, item) => sum + Number(item.values['views']), 0);
         } else if (repo.reportType === 'TopCountries') {
-          console.log('TopCountries');
-          console.log(repo);
+          repo.points.forEach((item, indexNum) => {
+            this.countriesMapData.push([item.id.toLowerCase(), item.values['views']]);
+            this.countriesTableData.push({
+              'indexNum': Number(indexNum) + 1,
+              'countryLabel': item.label,
+              'value': item.values['views'],
+            });
+          });
         } else if (repo.reportType === 'TopCities') {
-          console.log('TopCities');
-          console.log(repo);
+          repo.points.forEach((item, indexNum) => {
+            // this.citiesBargraphData.push([item.id, item.values['views']]);
+            this.cityNames.push(item.label);
+            this.cityViews.push(item.values['views']);
+            this.citiesTableData.push({
+              'indexNum': Number(indexNum) + 1,
+              'cityLabel': item.label,
+              'value': item.values['views'],
+            });
+          });
         } else {
-          console.log(repo);
+          // console.log(repo);
         }
       });
+      console.log('======8888888888=========');
+      console.log(this.countriesTableData);
+      this.setCountriesChartOptions();
+      this.setCitiesBargraphOptions();
+      this.reportsLoaded = true;
     });
   }
 
@@ -99,6 +139,71 @@ export class PublicationComponent extends BaseComponent implements OnInit{
           data: this.dataList
         }
       ]
+    };
+  }
+
+  setCountriesChartOptions() {
+
+    this.countriesMapChartOptions = {
+      chart: {
+        map: worldMap
+      },
+      title: {
+        text: 'World Map'
+      },
+      mapNavigation: {
+        enabled: true,
+        buttonOptions: {
+          verticalAlign: 'bottom'
+        }
+      },
+      colorAxis: {
+        min: 0
+      },
+      series: [
+        {
+          type: 'map',
+          name: 'Views',
+          mapData: worldMap,
+          data: this.countriesMapData,
+          dataLabels: {
+            enabled: true,
+            format: '{point.value}'
+          },
+          tooltip: {
+            pointFormat: '{point.name}: {point.value}'
+          }
+        }
+      ]
+    };
+  }
+  setCitiesBargraphOptions() {
+    this.citiesBargraphOptions = {
+      chart: { type: 'bar' },
+      title: { text: 'Views per City' },
+      xAxis: {
+        categories: this.cityNames,
+        title: { text: 'Cities' }
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Views',
+          align: 'high'
+        },
+        labels: { overflow: 'justify' }
+      },
+      tooltip: { valueSuffix: ' views' },
+      plotOptions: {
+        bar: {
+          dataLabels: { enabled: true }
+        }
+      },
+      series: [{
+        name: 'Views',
+        type: 'bar',
+        data: this.cityViews
+      }]
     };
   }
   generateCitations(){
@@ -138,7 +243,39 @@ export class PublicationComponent extends BaseComponent implements OnInit{
       template: 'mla',
       lang: 'en-US'
     });
-    this.pageLoaded = true;
+    this.bibtexCitation = cite.format('bibtex', {
+      format: 'text'
+    });
+
+    this.endNoteCitation = cite.format('ris', {
+      format: 'text'
+    });
+
+    this.citationsLoaded = true;
+  }
+
+  downloadCitation(format: string) {
+    let citation: string;
+    let fileName: string;
+    let mimeType: string;
+
+    if (format === 'endnote') {
+      citation = this.endNoteCitation;
+      fileName = 'citation.ris';
+      mimeType = 'application/x-research-info-systems';
+    } else if (format === 'bibtex') {
+      citation = this.bibtexCitation;
+      fileName = 'citation.bib';
+      mimeType = 'application/x-bibtex';
+    }
+
+    const blob = new Blob([citation], { type: mimeType });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    a.click();
+    window.URL.revokeObjectURL(url);
   }
 
   extractDateParts(dateStr: string): number[] {
@@ -488,6 +625,5 @@ export class PublicationComponent extends BaseComponent implements OnInit{
       '  </bibliography>\n' +
       '</style>';
   }
-
 
 }

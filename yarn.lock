@@ -1854,6 +1854,11 @@
   resolved "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.3.tgz"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
+"@highcharts/map-collection@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@highcharts/map-collection/-/map-collection-2.2.0.tgz#4bb7de57f61cd6f68fc769c5b3be822598937303"
+  integrity sha512-qX4ZtjvZtCCsVFClMN2/Xh4RO3MrfSLydMXAfTwprT4w4oRNM7wQaKFP1ZU0ZvOZ9xX8eFK3wWp9Yck/PUnE9g==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.8.tgz"
